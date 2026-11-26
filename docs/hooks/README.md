@@ -6,7 +6,7 @@
 > This document was designed for both humans and agents.
 
 Hooks are user-defined shell scripts that run when various events happen during
-the agent lifecycle, allowing you to both build on top of Crush, customize
+the agent lifecycle, allowing you to both build on top of Pascal, customize
 its behavior, and exert deterministic control over an agent's wily behavior.
 
 Hooks are just shell commands, and were designed to be both simple and future
@@ -18,9 +18,9 @@ forward.
 - Hooks can be written in any language because they're just executables: Bash, Python, Node, Rust, Haskell, whatever
 - Hooks are largely Claude Code-compatible: same payload field names, same
   output forms, same exit codes
-- Crush ships with a builtin `crush-hook` skill to write, edit, and configure
-  hooks; just tell Crush how to configure Crush
-- Crush supports 13 hook events covering the full agent lifecycle: tool use,
+- Pascal ships with a builtin `pascal-hook` skill to write, edit, and configure
+  hooks; just tell Pascal how to configure Pascal
+- Pascal supports 13 hook events covering the full agent lifecycle: tool use,
   session management, turn control, permissions, compaction, and error handling
 - Hooks run in parallel for speed, but their results compose in config order
   for determinism
@@ -49,7 +49,7 @@ disallow the use of Haskell (but we love you, Simon Peyton Jones).
 The first thing we need to do is set up our hook. Let's add the following to
 our **project-level** `pascalrc`. Relative paths like `./no-haskell.sh` work
 here because the project root is your working directory. If you're configuring
-a global hook (`~/.config/crush/pascalrc`), use an absolute path instead.
+a global hook (`~/.config/pascal/pascalrc`), use an absolute path instead.
 
 ```bash
 # PreToolUse is a hook that fires before a tool is used
@@ -89,7 +89,7 @@ That's basically it. For the full guide on how hooks work, however, read on.
 
 ## Execution model
 
-Hooks run through Crush's embedded POSIX shell (`mvdan.cc/sh`) — the same
+Hooks run through Pascal's embedded POSIX shell (`mvdan.cc/sh`) — the same
 interpreter the `bash` tool uses. Inline commands and shebang-less scripts
 execute in-process; scripts with a `#!` shebang dispatch to the named
 interpreter via `os/exec`. This contract is identical on macOS, Linux, and
@@ -109,19 +109,19 @@ What this means in practice:
   `#!/usr/bin/env bash` scripts work on Windows the same way they do on
   Unix. CRLF line endings in the shebang line are tolerated.
 - **Permissive shebang fallback**: if the absolute path in a shebang
-  doesn't exist (e.g. `#!/bin/bash` on Windows), Crush falls back to a
+  doesn't exist (e.g. `#!/bin/bash` on Windows), Pascal falls back to a
   `PATH` lookup of the base name (`bash`) before giving up. A debug-level
   log records the fallback. If the interpreter isn't on `PATH` either, the
   hook fails cleanly as a non-blocking warning and the agent proceeds as
   "no opinion".
-- **Environment**: every hook sees `CRUSH=1`, `AGENT=crush`, and
-  `AI_AGENT=crush` on top of the `PASCAL_*` hook-specific variables. These
+- **Environment**: every hook sees `CRUSH=1`, `AGENT=pascal`, and
+  `AI_AGENT=pascal` on top of the `PASCAL_*` hook-specific variables. These
   three markers are guaranteed and match what the `bash` tool sets, so
   scripts that detect "am I being run by an AI agent?" behave the same in
   both contexts.
-- **Timeout behavior**: when a hook exceeds its timeout, Crush cancels the
+- **Timeout behavior**: when a hook exceeds its timeout, Pascal cancels the
   context and waits a short grace period (~1s) for the interpreter to
-  yield. If the hook still hasn't returned, Crush abandons it, logs a
+  yield. If the hook still hasn't returned, Pascal abandons it, logs a
   warning, and treats the result as "no opinion" so the agent can proceed.
   Long-running work should honor context cancellation or run in a
   subprocess via a shebang.
@@ -149,13 +149,13 @@ hook add TurnEnd \
 > The `command` is resolved relative to your **current working directory** —
 > not relative to the config file. Relative paths like `./hooks/whatever.sh`
 > work fine in project-level `.pascalrc` because the project root is also
-> your working directory. For **global** config (`~/.config/crush/`),
+> your working directory. For **global** config (`~/.config/pascal/`),
 > however, you must use either an absolute path or an inline command:
 >
 > ```bash
-> # Global ~/.config/crush/pascalrc with absolute path
+> # Global ~/.config/pascal/pascalrc with absolute path
 > hook add PreToolUse \
->   --command "/home/you/.config/crush/hooks/no-haskell.sh"
+>   --command "/home/you/.config/pascal/hooks/no-haskell.sh"
 >
 > # Or use an inline command:
 > # hook add PreToolUse \
@@ -167,7 +167,7 @@ wins when rewriting input, but first deny wins when blocking.
 
 ## Events
 
-Crush supports 13 hook events. Event names are case-insensitive and accept
+Pascal supports 13 hook events. Event names are case-insensitive and accept
 snake_case (`PreToolUse`, `pre_tool_use`, `PRETOOLUSE` all work). An unknown
 event name is a config error.
 
@@ -319,24 +319,24 @@ Hooks are keyed by event name. Only `command` is required:
 
 ## Building Hooks
 
-When a hook fires, Crush:
+When a hook fires, Pascal:
 
 1. Filters hooks whose `matcher` regex matches the tool name (no matcher = match
    all).
 2. Deduplicates by `command` (identical commands run once).
-3. Runs all matching hooks **in parallel** through Crush's embedded POSIX
+3. Runs all matching hooks **in parallel** through Pascal's embedded POSIX
    shell (see [Execution model](#execution-model)).
 4. Waits for all to finish (or time out), then aggregates results **in config
    order**: deny wins over allow, allow wins over none; `updated_input` patches
    shallow-merge in order.
 5. Applies the result **before** permission checks. If the aggregated decision
    is `deny`, the tool call is blocked and you never see a permission prompt
-   for it. If it's `allow`, Crush treats that as affirmative pre-approval and
+   for it. If it's `allow`, Pascal treats that as affirmative pre-approval and
    also skips the prompt. Silence (no decision) falls through to the normal
    permission flow.
 
 Note that you can omit `matcher` and match in your shell script instead,
-however you'll incur some additional overhead as Crush will still parse and
+however you'll incur some additional overhead as Pascal will still parse and
 run each hook.
 
 ### Input
@@ -351,9 +351,9 @@ The available environment variables are:
 
 | Variable                     | Description                                    |
 | ---------------------------- | ---------------------------------------------- |
-| `CRUSH`                      | Always `1` when running under Crush.           |
-| `AGENT`                      | Always `crush`.                                |
-| `AI_AGENT`                   | Always `crush`.                                |
+| `CRUSH`                      | Always `1` when running under Pascal.           |
+| `AGENT`                      | Always `pascal`.                                |
+| `AI_AGENT`                   | Always `pascal`.                                |
 | `PASCAL_EVENT`                | The hook event name (e.g. `PreToolUse`).       |
 | `PASCAL_TOOL_NAME`            | The tool being called (e.g. `bash`).           |
 | `PASCAL_SESSION_ID`           | Current session ID.                            |
@@ -366,7 +366,7 @@ The available environment variables are:
 The `PASCAL_TOOL_*` variables are only set on events that carry a tool call.
 
 The `CRUSH`, `AGENT`, and `AI_AGENT` markers are also set by the `bash`
-tool, so a script can detect "am I running under Crush?" the same way in
+tool, so a script can detect "am I running under Pascal?" the same way in
 either context.
 
 #### JSON
@@ -414,7 +414,7 @@ command = data.get("tool_input", {}).get("command", "")
 
 ### Output
 
-Hooks communicate back to Crush via **exit code** and `stdout`/`stderr`. The
+Hooks communicate back to Pascal via **exit code** and `stdout`/`stderr`. The
 simplest way to do this is to return an error code and print additional context
 to stderr. For example:
 
@@ -525,7 +525,7 @@ When multiple hooks match the same tool call:
 
 ### Timeouts
 
-If a hook exceeds its timeout, Crush cancels its context and treats the
+If a hook exceeds its timeout, Pascal cancels its context and treats the
 result as a non-blocking error so the tool call proceeds. The default
 timeout is 30 seconds. Shebang-dispatched subprocesses are killed through
 `exec.CommandContext`; in-process hooks get a short grace period to yield
@@ -562,7 +562,7 @@ exit 0
 ### Auto-approve read-only tools
 
 Skip the permission prompt for tools that can't change anything. The hook
-returns `decision: "allow"`, which tells Crush to pre-approve the call:
+returns `decision: "allow"`, which tells Pascal to pre-approve the call:
 
 ```bash
 hook add PreToolUse \
@@ -689,16 +689,16 @@ process.stdin.on("end", () => {
 
 ## Claude Code compatibility
 
-Crush hooks are largely compatible with [Claude Code
+Pascal hooks are largely compatible with [Claude Code
 hooks](https://code.claude.com/docs/en/hooks). Most hook scripts written for
-Claude Code run under Crush unchanged:
+Claude Code run under Pascal unchanged:
 
 - **Payload fields** use Claude Code's names where one exists:
   `hook_event_name`, `session_id`, `cwd`, `tool_name`, `tool_input`,
   `tool_use_id`, `tool_response`, `error`, `last_assistant_message`, `source`,
   `reason`, `trigger`. `CLAUDE_PROJECT_DIR` is exported alongside
   `PASCAL_PROJECT_DIR`.
-- **Output** accepts Claude Code's forms as well as Crush's:
+- **Output** accepts Claude Code's forms as well as Pascal's:
   `hookSpecificOutput` (`permissionDecision`, `permissionDecisionReason`,
   `updatedInput`, `updatedToolOutput`, `additionalContext`), the top-level
   `decision: "block"` with `reason`, and `continue: false` with `stopReason`.
@@ -706,20 +706,20 @@ Claude Code run under Crush unchanged:
   the reason, and any other code is a non-blocking error unless stdout held a
   JSON object.
 
-Where Crush differs:
+Where Pascal differs:
 
 - **Config shape** is flat: a list of `{matcher, command}` per event, not
   Claude Code's nested `matcher` groups with `hooks` arrays. Only `command`
   hooks exist; there are no `http`, `prompt`, or `agent` hooks.
 - **Event names**: `TurnStart`, `TurnEnd`, `Interrupt`, and `PermissionResult`
-  are Crush's names for the per-turn events; the table in [Events](#events)
+  are Pascal's names for the per-turn events; the table in [Events](#events)
   maps each one to its Claude Code counterpart. `PermissionRequest` is
   observe-only here; use `PreToolUse` to allow or deny.
 - **`updated_input` on `PreToolUse`** is a shallow-merge patch against the
   original `tool_input` rather than a full replacement, so keys you omit are
   preserved. Claude Code's `updatedInput` is treated the same way.
 - **`tool_response`** is the tool's text output as one string, not a
-  per-tool object. Crush's own field for replacing it is `updated_output`;
+  per-tool object. Pascal's own field for replacing it is `updated_output`;
   Claude Code's `updatedToolOutput` maps onto it.
 - **`halt` and exit 49** have no Claude Code equivalent; they end the turn.
 
@@ -947,7 +947,7 @@ PreToolUse-specific rules:
 
 1. `decision` precedence: `deny` > `allow` > `null`. First deny determines the
    outcome; subsequent allows don't override. If the final aggregated decision
-   is `allow`, Crush pre-approves the tool call and skips the permission
+   is `allow`, Pascal pre-approves the tool call and skips the permission
    prompt. If it's `null` (no hook allowed), the tool goes through the normal
    permission flow.
 2. `updated_input` patches shallow-merge sequentially against the original

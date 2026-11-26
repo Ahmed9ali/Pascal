@@ -427,10 +427,10 @@ func LetterA(stretch bool) string {
 	// ▀   ▀
 
 	side := heredoc.Doc(`
-        ▄
-        █
-        ▀
-    `)
+		█
+		█
+		▀
+	`)
 	middle := heredoc.Doc(`
         ▀
         ▀

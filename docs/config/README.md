@@ -5,17 +5,17 @@
 
 > [!TIP]
 >
-> Crush can configure itself via a builtin config skill. That is to say,
-> can generally just tell Crush want you want to configure using natural
+> Pascal can configure itself via a builtin config skill. That is to say,
+> can generally just tell Pascal want you want to configure using natural
 > language.
 >
-> If you're migrating from the old JSON format, you can also ask Crush to
+> If you're migrating from the old JSON format, you can also ask Pascal to
 > convert the config for you.
 
-Crush is configured with Bash via a set of Crush-specific builtin commands. By
-default, global config lives at `~/.config/crush/pascalrc` on Unix-like systems
-and `%USERPROFILE%\.config\crush\pascalrc` on Windows. It works like a `.bashrc`:
-it runs when Crush starts and configures the agent.
+Pascal is configured with Bash via a set of Pascal-specific builtin commands. By
+default, global config lives at `~/.config/pascal/pascalrc` on Unix-like systems
+and `%USERPROFILE%\.config\pascal\pascalrc` on Windows. It works like a `.bashrc`:
+it runs when Pascal starts and configures the agent.
 
 ```bash
 # Add Ollama.
@@ -57,9 +57,9 @@ provider add my-secret-provider \
 
 Two reasons:
 
-1. Crush ships with a first-class Bash interpreter, so we get the logic for
+1. Pascal ships with a first-class Bash interpreter, so we get the logic for
    free.
-2. Ultimately, Crush needs to be able to configure itself, and command-based
+2. Ultimately, Pascal needs to be able to configure itself, and command-based
    config allows both users and the agent to use the same tools.
 
 ## What about JSON?
@@ -70,7 +70,7 @@ be receiving new features. For more see [Legacy JSON](#legacy-json).
 ## Config versioning
 
 Not breaking the config API is really important to us! That said, you can
-target specific Crush versions with `$PASCAL_VERSION`:
+target specific Pascal versions with `$PASCAL_VERSION`:
 
 ```bash
 if [[ $PASCAL_VERSION == "0.85.*" ]]; then
@@ -85,27 +85,27 @@ don't download random configs without reading them first.
 
 ## Where config lives
 
-Crush looks for config in the following places, with lower numbers taking
+Pascal looks for config in the following places, with lower numbers taking
 precedence:
 
 | Priority | Unix-like                        | Windows                           |
 | -------- | -------------------------------- | --------------------------------- |
 | 1        | `./.pascalrc`                     | `.\.pascalrc`                      |
 | 2        | `./pascalrc`                      | `.\pascalrc`                       |
-| 3        | `$XDG_CONFIG_HOME/crush/pascalrc` | `%XDG_CONFIG_HOME%\crush\pascalrc` |
+| 3        | `$XDG_CONFIG_HOME/pascal/pascalrc` | `%XDG_CONFIG_HOME%\pascal\pascalrc` |
 
 Legacy JSON uses `.pascal.json` / `pascal.json` in the same directories as the
 above. Everything found is merged, with project settings overriding global ones
 and `pascalrc` overriding JSON in the same directory. If a folder has both, they
-merge and Crush logs a warning.
+merge and Pascal logs a warning.
 
-Data directories (`~/.local/share/crush` on Unix-like systems and
-`%LOCALAPPDATA%\crush` on Windows) contain machine-owned JSON state. Crush does
+Data directories (`~/.local/share/pascal` on Unix-like systems and
+`%LOCALAPPDATA%\pascal` on Windows) contain machine-owned JSON state. Pascal does
 not discover or execute a `pascalrc` from those locations.
 
 > [!NOTE]
-> Crush also stores state data in `$XDG_DATA_HOME/crush`
-> (`%LOCALAPPDATA%\crush` on Windows). This is application state, and should
+> Pascal also stores state data in `$XDG_DATA_HOME/pascal`
+> (`%LOCALAPPDATA%\pascal` on Windows). This is application state, and should
 > not be edited by hand.
 
 ## Command Reference
@@ -122,7 +122,7 @@ Available Commands:
   lsp           Manage language servers
   hook          Manage hooks
   permissions   Configure tool permissions
-  option        Configure general Crush behavior
+  option        Configure general Pascal behavior
 ```
 
 ### provider
@@ -199,7 +199,7 @@ Usage:
 ### model
 
 Manage custom models and the large/small model slots. Model references use the
-same `<provider>/<id>` form printed by `crush models`.
+same `<provider>/<id>` form printed by `pascal models`.
 
 ```text
 Usage:
@@ -464,7 +464,7 @@ permissions deny bash
 
 ### option
 
-Configure general Crush behavior, paths, attribution, and the terminal UI.
+Configure general Pascal behavior, paths, attribution, and the terminal UI.
 Boolean values are optional and default to `true`.
 
 ```text
@@ -482,18 +482,18 @@ Boolean Keys:
   auto-lsp                       automatically configure language servers
   progress                       show progress indicators
   pinentry-integrated            render GPG passphrase prompts as a native
-                                 Crush dialog instead of an external
+                                 Pascal dialog instead of an external
                                  pinentry program; never modifies GPG or
                                  git configuration (default true)
   metrics                        send anonymous usage metrics
   auto-summarize                 automatically summarize long conversations
   provider-auto-update           update the provider catalog automatically
   default-providers              include built-in providers
-  attribution-generated-with     add the Generated with Crush line
+  attribution-generated-with     add the Generated with Pascal line
 
 String Keys:
   data-directory string            directory for project data and state
-  initialize-as string             context filename created by crush init
+  initialize-as string             context filename created by pascal init
   notifications string             notification style: auto, native, osc, bell,
                                    or disabled
   coreutils string                 core utilities used by shell commands:
@@ -511,7 +511,7 @@ Integer Keys:
   max-background-jobs int          background shell jobs allowed to run at
                                    once; finished jobs never count against it
                                    (default 50)
-  pinentry-cache-timeout int       seconds Crush keeps an entered GPG
+  pinentry-cache-timeout int       seconds Pascal keeps an entered GPG
                                    passphrase in memory so repeated signing
                                    does not re-prompt; 0 disables it
                                    (default 0)
@@ -531,7 +531,7 @@ option attribution-trailer-style assisted-by
 
 #### `option coreutils`
 
-Select which implementation of the Unix core utilities Crush's shell runs
+Select which implementation of the Unix core utilities Pascal's shell runs
 for commands like `ls`, `find`, or `sed`.
 
 - `turtle`: always run
@@ -569,9 +569,9 @@ Available Keys:
 
 #### Environment variables
 
-Variables you `export` in a `pascalrc` are set in Crush's environment when it
+Variables you `export` in a `pascalrc` are set in Pascal's environment when it
 starts, the same as the `env` object in `pascal.json`. Only variables the
-script exports or changes count; the environment Crush inherited is left
+script exports or changes count; the environment Pascal inherited is left
 alone.
 
 ```bash
@@ -584,7 +584,7 @@ again after the `source`; the last assignment wins, as in any shell.
 
 #### `option prompt`
 
-Replace one of Crush's built-in prompts with your own file.
+Replace one of Pascal's built-in prompts with your own file.
 
 ```text
 Usage:
@@ -596,23 +596,23 @@ Available Names:
   plan         the planning agent's system prompt
   summary      the instructions used to compact a long conversation
   title        the instructions used to name a session
-  initialize   the instructions used by crush init
+  initialize   the instructions used by pascal init
 ```
 
 ```bash
-option prompt coder ~/.config/crush/prompts/coder.md.tpl
-option prompt summary ~/.config/crush/prompts/summary.md
+option prompt coder ~/.config/pascal/prompts/coder.md.tpl
+option prompt summary ~/.config/pascal/prompts/summary.md
 ```
 
 Paths go through the shell, so `~` and `$VARS` work. A relative path is
 resolved against the directory of the config file that sets it. So
 `option prompt coder .pascal/coder.md.tpl` in a project's `pascalrc` finds the
 project's file, and `option prompt summary prompts/summary.md` in your global
-`~/.config/crush/pascalrc` finds `~/.config/crush/prompts/summary.md` from every
-project. Both hold when Crush starts with `--cwd` or runs on a server.
+`~/.config/pascal/pascalrc` finds `~/.config/pascal/prompts/summary.md` from every
+project. Both hold when Pascal starts with `--cwd` or runs on a server.
 
 Overrides layer like every other option: one in your global
-`~/.config/crush/pascalrc` applies everywhere, and a project config replaces
+`~/.config/pascal/pascalrc` applies everywhere, and a project config replaces
 it name by name. Overriding `coder` in a project leaves a global `summary`
 override in place.
 
@@ -622,7 +622,7 @@ In `pascal.json`, the same settings live under `options.prompts`:
 {
   "options": {
     "prompts": {
-      "coder": "~/.config/crush/prompts/coder.md.tpl",
+      "coder": "~/.config/pascal/prompts/coder.md.tpl",
       "summary": ".pascal/summary.md"
     }
   }
@@ -634,11 +634,11 @@ any configured override, and resolves relative paths against the directory
 you ran the command from:
 
 ```bash
-crush --prompt coder=./terse-coder.md.tpl
-crush run --prompt summary=./summary.md "tidy up the changelog"
+pascal --prompt coder=./terse-coder.md.tpl
+pascal run --prompt summary=./summary.md "tidy up the changelog"
 ```
 
-When Crush runs through a server, every session in a directory shares one
+When Pascal runs through a server, every session in a directory shares one
 workspace, so `--prompt` only applies to the session that opens it. A later
 `--prompt` asking for different prompts fails rather than being ignored; close
 the other sessions in that directory first.
@@ -661,7 +661,7 @@ unless you ask for it too. That includes the pieces you probably want:
 
 ```text
 {{.AvailSkillXML}}        available skills
-{{.WorkingDir}}           where Crush is running
+{{.WorkingDir}}           where Pascal is running
 {{.Platform}}             the host OS
 {{.GitStatus}}            branch, status, and recent commits
 ```
@@ -688,7 +688,7 @@ Diagnostics (lint/typecheck) are included in tool output.
 ```
 
 A name that is not on the list above, a file that cannot be read, and a
-template Crush cannot parse all fail at startup rather than mid-conversation.
+template Pascal cannot parse all fail at startup rather than mid-conversation.
 
 #### `option ui`
 
@@ -717,7 +717,7 @@ Available Keys:
                                 always, or never
   exit-banner default|compact|none
                                 control the post-session banner: default shows
-                                the Crush logo, compact shows only the resume
+                                the Pascal logo, compact shows only the resume
                                 hint, none hides it entirely
   completions-max-depth int     maximum directory depth shown by completions
   completions-max-items int     maximum items returned to completions
@@ -752,9 +752,9 @@ option ui completions-max-items 200
 Because it's Bash, a shared base config is just a `source`:
 
 ```bash
-# Unix-like: ~/.config/crush/pascalrc
-# Windows:   %USERPROFILE%\.config\crush\pascalrc
-source ~/team/crush-base.sh    # sets up providers, a few skills
+# Unix-like: ~/.config/pascal/pascalrc
+# Windows:   %USERPROFILE%\.config\pascal\pascalrc
+source ~/team/pascal-base.sh    # sets up providers, a few skills
 
 # …but on this machine, drop a skill path the base added and add my own.
 option reset skill-path
@@ -791,7 +791,7 @@ it's all just Bash, and values are expanded once, by Bash. A single-quoted
 `'$FOO'` stays the literal text `$FOO`.
 
 Both formats are trusted code: they run with your shell privileges before the UI
-appears. Don't launch Crush in a directory whose config you haven't read.
+appears. Don't launch Pascal in a directory whose config you haven't read.
 
 ---
 

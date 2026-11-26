@@ -4952,20 +4952,20 @@ func (m *UI) toggleModeAndReport(target permission.PermissionMode) tea.Cmd {
 // permission mode, or whether plan or bang mode is enabled.
 func (m *UI) setEditorPrompt(mode permission.PermissionMode) {
 	if m.bangMode {
-		m.textarea.SetPromptFunc(4, m.bangPromptFunc)
+		m.textarea.SetPromptFunc(4, m.cursorLinePrompt(m.bangPromptFunc))
 		return
 	}
 	if m.mode == uiInputModePlan {
-		m.textarea.SetPromptFunc(4, m.planPromptFunc)
+		m.textarea.SetPromptFunc(4, m.cursorLinePrompt(m.planPromptFunc))
 		return
 	}
 	switch mode {
 	case permission.PermissionModeSysadmin:
-		m.textarea.SetPromptFunc(4, m.sysadminPromptFunc)
+		m.textarea.SetPromptFunc(4, m.cursorLinePrompt(m.sysadminPromptFunc))
 	case permission.PermissionModeYolo:
-		m.textarea.SetPromptFunc(4, m.yoloPromptFunc)
+		m.textarea.SetPromptFunc(4, m.cursorLinePrompt(m.yoloPromptFunc))
 	default:
-		m.textarea.SetPromptFunc(4, m.normalPromptFunc)
+		m.textarea.SetPromptFunc(4, m.cursorLinePrompt(m.normalPromptFunc))
 	}
 }
 
@@ -4977,12 +4977,12 @@ func (m *UI) normalPromptFunc(info textarea.PromptInfo) string {
 		if info.Focused {
 			return t.Editor.PromptNormalIconFocused.Render()
 		}
-		return "::: "
+		return t.Editor.PromptNormalIconFocused.Render()
 	}
 	if info.Focused {
-		return t.Editor.PromptNormalFocused.Render()
+		return lineNumberGutter(info, t.Editor.PromptNormalFocused)
 	}
-	return t.Editor.PromptNormalBlurred.Render()
+	return lineNumberGutter(info, t.Editor.PromptNormalBlurred)
 }
 
 // planPromptFunc marks planning with a badge beside the editor.
@@ -4995,9 +4995,9 @@ func (m *UI) planPromptFunc(info textarea.PromptInfo) string {
 		return t.Editor.PromptPlanIconBlurred.Render()
 	}
 	if info.Focused {
-		return t.Editor.PromptPlanDotsFocused.Render()
+		return lineNumberGutter(info, t.Editor.PromptPlanDotsFocused)
 	}
-	return t.Editor.PromptPlanDotsBlurred.Render()
+	return lineNumberGutter(info, t.Editor.PromptPlanDotsBlurred)
 }
 
 // yoloPromptFunc returns the yolo mode editor prompt style with warning icon
@@ -5012,9 +5012,9 @@ func (m *UI) yoloPromptFunc(info textarea.PromptInfo) string {
 		}
 	}
 	if info.Focused {
-		return t.Editor.PromptYoloDotsFocused.Render()
+		return lineNumberGutter(info, t.Editor.PromptYoloDotsFocused)
 	}
-	return t.Editor.PromptYoloDotsBlurred.Render()
+	return lineNumberGutter(info, t.Editor.PromptYoloDotsBlurred)
 }
 
 // bangPromptFunc returns the bang mode editor prompt style with Turtle-colored
@@ -5028,9 +5028,9 @@ func (m *UI) bangPromptFunc(info textarea.PromptInfo) string {
 		return t.Editor.PromptBangIconBlurred.Render()
 	}
 	if info.Focused {
-		return t.Editor.PromptBangDotsFocused.Render()
+		return lineNumberGutter(info, t.Editor.PromptBangDotsFocused)
 	}
-	return t.Editor.PromptBangDotsBlurred.Render()
+	return lineNumberGutter(info, t.Editor.PromptBangDotsBlurred)
 }
 
 // toggleInputMode advances the Shift+Tab cycle (code -> plan -> YOLO -> code),
@@ -5188,9 +5188,9 @@ func (m *UI) sysadminPromptFunc(info textarea.PromptInfo) string {
 		}
 	}
 	if info.Focused {
-		return t.Editor.PromptSysadminDotsFocused.Render()
+		return lineNumberGutter(info, t.Editor.PromptSysadminDotsFocused)
 	}
-	return t.Editor.PromptSysadminDotsBlurred.Render()
+	return lineNumberGutter(info, t.Editor.PromptSysadminDotsBlurred)
 }
 
 // closeCompletions closes the completions popup and resets state.
@@ -5423,7 +5423,7 @@ func (m *UI) renderEditorView(width int) string {
 	}
 	return strings.Join([]string{
 		attachmentsView,
-		m.textarea.View(),
+		m.editorViewWithShimmer(),
 		"", // margin at bottom of editor
 	}, "\n")
 }
@@ -6815,6 +6815,7 @@ func renderLogo(t *styles.Styles, compact, hyper bool, width int) string {
 		VersionColor: t.Logo.VersionColor,
 		Width:        width,
 		Hyper:        hyper,
+		Plain:        true,
 	})
 }
 
@@ -6847,4 +6848,20 @@ func (m *UI) markDispatchReported(label string) {
 			item.MarkDispatchReported()
 		}
 	}
+}
+
+// editorViewWithShimmer returns the textarea view, replacing the flat
+// "working" placeholder line with an animated shimmer while the agent is busy.
+func (m *UI) editorViewWithShimmer() string {
+	view := m.textarea.View()
+	if !m.isAgentBusy() || m.textarea.Value() != "" {
+		return view
+	}
+	lines := strings.Split(view, "\n")
+	if len(lines) == 0 {
+		return view
+	}
+	prompt := m.normalPromptFunc(textarea.PromptInfo{LineNumber: 0, Focused: false})
+	lines[0] = prompt + shimmerText("Processing"+strings.Repeat(".", 1+int(time.Now().UnixMilli()/400)%3), time.Now())
+	return strings.Join(lines, "\n")
 }

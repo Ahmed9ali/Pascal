@@ -24,7 +24,7 @@ puts there is concatenated into what the model sees. That's fine for short notes
 - Large files can push the turn past the context window.
 
 `context_files` is the lazy alternative: the hook returns **paths**, not
-contents. Crush tells the agent the files exist and are relevant, and the agent
+contents. Pascal tells the agent the files exist and are relevant, and the agent
 decides whether to open them with its existing `view` tool.
 
 ### Proposed shape
@@ -44,7 +44,7 @@ a debug log (don't fail the hook over a missing file).
 
 ### How the agent sees it
 
-Crush appends a short note to the turn's context along the lines of:
+Pascal appends a short note to the turn's context along the lines of:
 
 ```
 ## Referenced files
@@ -159,7 +159,7 @@ control features are still planned.
 
 ### Motivation
 
-Crush now supports 13 hook events including `TurnStart`, which covers the basic
+Pascal now supports 13 hook events including `TurnStart`, which covers the basic
 observability use case. The remaining gap is **control**: letting hooks block
 prompts matching a policy or rewrite them before they reach the LLM. This would
 enable secret redaction from prompts, policy enforcement ("don't mention

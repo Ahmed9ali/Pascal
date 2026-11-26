@@ -1,7 +1,7 @@
 # Channels (experimental)
 
-Most MCP servers just expose tools that Crush calls. A channel goes the other
-way: the server _pushes_ events into your session, so Crush can react to things
+Most MCP servers just expose tools that Pascal calls. A channel goes the other
+way: the server _pushes_ events into your session, so Pascal can react to things
 happening outside the terminal, like a webhook firing, a CI run failing, or
 someone sending you a chat message. The protocol itself is described in the
 [channels reference](https://code.claude.com/docs/en/channels-reference).
@@ -11,7 +11,7 @@ someone sending you a chat message. The protocol itself is described in the
 To become a channel, a server declares the `claude/channel` capability in its
 `initialize` result (`capabilities.experimental["claude/channel"] = {}`) and
 then emits `notifications/claude/channel` events. Each event has a `content`
-body and an optional `meta` map. Crush drops every event into the active session
+body and an optional `meta` map. Pascal drops every event into the active session
 as a `<channel>` element:
 
 ```text
@@ -28,8 +28,8 @@ You can opt in for a single launch with `--channels`:
 
 ```bash
 # Enable one or more configured MCP servers as channels for this session.
-crush --channels server:webhook
-crush --channels server:webhook --channels server:messaging
+pascal --channels server:webhook
+pascal --channels server:webhook --channels server:messaging
 ```
 
 If you don't want to pass the flag every time, set `channel_enabled` on the
@@ -66,7 +66,7 @@ server, plus any channel-capable servers you haven't turned on yet.
 ## Security
 
 The `source` attribute is always the server's name from your config, so you can
-trust it. The payload is a different story. It comes from the server, so Crush
+trust it. The payload is a different story. It comes from the server, so Pascal
 treats it as untrusted: it checks the structure, caps the size of the body and
 attributes, only allows `meta` keys made of `[A-Za-z0-9_]`, and escapes
 everything so a payload can't break out of the `<channel>` element or fake its
@@ -76,13 +76,13 @@ capability, can't inject anything at all.
 
 ## Delivery
 
-Channels work both in the regular in-process `crush` and against a shared
-`crush serve` backend.
+Channels work both in the regular in-process `pascal` and against a shared
+`pascal serve` backend.
 
 In-process, an event goes into whatever session you have open. If nothing is
-open, Crush starts a new session, so events are never lost.
+open, Pascal starts a new session, so events are never lost.
 
-With `crush serve`, the server delivers each event exactly once. If a client is
+With `pascal serve`, the server delivers each event exactly once. If a client is
 attached, it goes into the session that client is looking at (or the most
 recently updated one, if clients are looking at different sessions). If no one
 is attached, it goes into the workspace's most recent session, and a new one is
@@ -99,17 +99,17 @@ Channels can talk back, too. A channel is still a normal MCP server, so any tool
 it exposes (say, a `reply` tool) is available to the agent like any other MCP
 tool. There's nothing channel-specific to set up. Declare `tools` in the
 server's capabilities, register the tool, and use the server's `instructions`
-string (which ends up in the system prompt) to tell Crush when to call it and
+string (which ends up in the system prompt) to tell Pascal when to call it and
 which `<channel>` attribute to send back, such as a `chat_id`.
 
-For example, a messaging MCP server (`your-messaging-mcp` here) could let Crush
+For example, a messaging MCP server (`your-messaging-mcp` here) could let Pascal
 send and receive chat messages:
 
 1. Add it to your config, using the `messaging` example from
    [Enabling a channel](#enabling-a-channel).
-2. Start Crush with `crush --channels server:messaging`.
+2. Start Pascal with `pascal --channels server:messaging`.
 
-Incoming messages show up as `<channel>` tags, and Crush replies with the
+Incoming messages show up as `<channel>` tags, and Pascal replies with the
 server's send tool, for example `send_message_to_user`.
 
 ## Channel reply routing
@@ -120,7 +120,7 @@ model decides to call a send tool on its own. That's not great.
 
 A `channel_reply` block on the server's MCP config fixes this. When a turn that
 came from that channel ends and the model _didn't_ reply through the channel,
-Crush sends the final response back through the tool you configured: to the
+Pascal sends the final response back through the tool you configured: to the
 sender for direct messages, or to the group for group messages.
 
 ```json
@@ -163,7 +163,7 @@ A few details on how routing works:
   pick a different meta attribute for the target, and `message_param` (`message`
   by default) to name the tool argument that gets the reply text.
 - If the model already called one of the route tools, or anything in
-  `suppress_tools`, during the turn, Crush skips the automatic reply so you
+  `suppress_tools`, during the turn, Pascal skips the automatic reply so you
   don't get the same answer twice.
 - Normal local turns, and channels without a `channel_reply` block, aren't
   affected at all.

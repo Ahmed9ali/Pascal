@@ -27,6 +27,8 @@ type Opts struct {
 	VersionColor color.Color // version text color
 	Width        int         // width of the rendered logo, used for truncation
 	Hyper        bool        // whether it is Pascal or Hypercrush
+	Plain        bool        // wordmark only
+	PlainVersion string      // version shown under the wordmark
 
 	// When true, stretch a random letterform on each render. Has no effect in
 	// compact mode. Mainly for testing. In production you will want to cache
@@ -81,6 +83,9 @@ func Render(base lipgloss.Style, version string, compact bool, o Opts) string {
 		// Stretch a random letterform on every render.
 		stretchIndex = rand.IntN(len(crushLetterforms))
 	}
+	if o.Plain {
+		stretchIndex = -1
+	}
 	crush := renderWord(spacing, stretchIndex, crushLetterforms...)
 	if o.Hyper && compact {
 		crush = renderWord(spacing, stretchIndex, hyperLetterforms...) + "\n" + crush
@@ -91,6 +96,15 @@ func Render(base lipgloss.Style, version string, compact bool, o Opts) string {
 		fmt.Fprintln(b, styles.ApplyForegroundGrad(base, r, o.TitleColorA, o.TitleColorB))
 	}
 	crush = b.String()
+	if o.Plain {
+		out := strings.TrimSpace(crush)
+		if o.PlainVersion != "" {
+			v := lipgloss.NewStyle().Foreground(o.VersionColor).Render(o.PlainVersion)
+			pad := max(0, crushWidth-lipgloss.Width(v))
+			out += "\n" + strings.Repeat(" ", pad) + v
+		}
+		return out
+	}
 
 	// Charm and version.
 	metaRowGap := 1

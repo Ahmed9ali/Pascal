@@ -25,7 +25,7 @@ session**. The mental model is exactly a shell and its `.bashrc`:
   `export` or `alias` at a live prompt.
 - To make it stick, you edit your `pascalrc` — like editing `.bashrc`.
 
-So you could say "Crush, switch to the small model for a bit" and it just
+So you could say "Pascal, switch to the small model for a bit" and it just
 runs `model small …`, live, no restart.
 
 > [!IMPORTANT]
@@ -114,11 +114,11 @@ larger, later increment.
 
 ### Motivation
 
-Crush currently uses JSON files in data directories as both persisted machine
+Pascal currently uses JSON files in data directories as both persisted machine
 state and high-priority configuration:
 
 ```text
-~/.local/share/crush/pascal.json
+~/.local/share/pascal/pascal.json
 .pascal/pascal.json
 ```
 
@@ -133,7 +133,7 @@ The goal is to make the roles explicit:
 |---|---|
 | User-authored executable configuration | `pascalrc` / `.pascalrc` |
 | Legacy user-authored static configuration | `pascal.json` / `.pascal.json` |
-| Crush-owned persistent preferences and history | versioned `state.json` |
+| Pascal-owned persistent preferences and history | versioned `state.json` |
 | Session-only changes | memory |
 | Credentials/OAuth tokens | dedicated secure storage |
 
@@ -145,8 +145,8 @@ config and being deep-merged through the config pipeline.
 ### Proposed files
 
 ```text
-~/.config/crush/pascalrc             global user config
-~/.local/share/crush/state.json     global machine state
+~/.config/pascal/pascalrc             global user config
+~/.local/share/pascal/state.json     global machine state
 ./pascalrc / ./.pascalrc              project user config
 .pascal/state.json                   workspace machine state
 ```
@@ -201,7 +201,7 @@ building without participating in precedence.
 User-authored JSON remains a supported config input during this work:
 
 ```text
-~/.config/crush/pascal.json
+~/.config/pascal/pascal.json
 ./pascal.json
 ./.pascal.json
 ```
@@ -215,7 +215,7 @@ If user JSON is retired later:
 1. Keep reading it for a compatibility period.
 2. Warn only when a user-authored JSON config is loaded.
 3. Provide an explicit conversion command (for example,
-   `crush config convert pascal.json > pascalrc`).
+   `pascal config convert pascal.json > pascalrc`).
 4. Never rewrite user config automatically.
 
 Using JSON internally for state is independent of deprecating JSON as a user
@@ -294,7 +294,7 @@ file untouched. Successfully migrated files can be renamed to
 **Status:** not implemented; probably unnecessary until a real use case
 appears.
 
-Crush currently has three useful tool states across both config formats:
+Pascal currently has three useful tool states across both config formats:
 
 | State | `pascalrc` | `pascal.json` | Behavior |
 |---|---|---|---|
@@ -306,7 +306,7 @@ Crush currently has three useful tool states across both config formats:
 block: because the tool is absent from the agent's tool list, the model cannot
 attempt to use it.
 
-The one state Crush does **not** have is "visible but always rejected": the
+The one state Pascal does **not** have is "visible but always rejected": the
 model can see and choose the tool, but the permission engine denies every
 request without prompting. Supporting that would require a separate
 permission-level deny list in both the config schema and permission engine.

@@ -48,13 +48,13 @@ func newHeader(com *common.Common) *header {
 func (h *header) refresh() {
 	t := h.com.Styles
 	isHyper := h.com.IsHyper()
-	charm := "Ahmed"
+	charm := ""
 	if !isHyper {
 		charm = " " + charm
 	}
-	name := "CRUSH"
+	name := "PASCAL"
 	if isHyper {
-		name = "HYPERCRUSH"
+		name = "HYPERPASCAL"
 	}
 	h.compactLogo = t.Header.Charm.Render(charm) + " " +
 		styles.ApplyBoldForegroundGrad(t.Header.LogoGradCanvas, name, t.Header.LogoGradFromColor, t.Header.LogoGradToColor) + " "

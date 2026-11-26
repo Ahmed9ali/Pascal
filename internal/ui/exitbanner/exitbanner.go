@@ -53,6 +53,8 @@ func Render(t *styles.Styles, banner config.ExitBanner, sess *session.Session, w
 // logoSection returns the ASCII art logo followed by the parting message.
 func logoSection(t *styles.Styles, contentWidth int) string {
 	crushLogo := logo.Render(t.Logo.GradCanvas, version.Version, true, logo.Opts{
+		Plain:        true,
+		PlainVersion: version.Version,
 		FieldColor:   t.Logo.FieldColor,
 		TitleColorA:  t.Logo.TitleColorA,
 		TitleColorB:  t.Logo.TitleColorB,
