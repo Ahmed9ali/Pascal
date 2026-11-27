@@ -16,9 +16,9 @@ import (
 	"github.com/ahmed/pascal/internal/skills"
 )
 
-const CrushInfoToolName = "crush_info"
+const PascalInfoToolName = "pascal_info"
 
-//go:embed crush_info.md
+//go:embed pascal_info.md
 var crushInfoDescription string
 
 type CrushInfoParams struct{}
@@ -31,7 +31,7 @@ func NewCrushInfoTool(
 	skillTracker *skills.Tracker,
 ) fantasy.AgentTool {
 	return fantasy.NewAgentTool(
-		CrushInfoToolName,
+		PascalInfoToolName,
 		crushInfoDescription,
 		func(ctx context.Context, _ CrushInfoParams, _ fantasy.ToolCall) (fantasy.ToolResponse, error) {
 			return fantasy.NewTextResponse(buildCrushInfo(cfg, lspManager, allSkills, activeSkills, skillTracker)), nil

@@ -52,7 +52,7 @@ func TestNewCrushLogsTool(t *testing.T) {
 	t.Parallel()
 	tool := NewCrushLogsTool("/tmp/test.log")
 	require.NotNil(t, tool)
-	require.Equal(t, CrushLogsToolName, tool.Info().Name)
+	require.Equal(t, PascalLogsToolName, tool.Info().Name)
 }
 
 func TestCrushLogs_HappyPath(t *testing.T) {

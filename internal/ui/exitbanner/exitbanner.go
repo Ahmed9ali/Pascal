@@ -65,7 +65,7 @@ func logoSection(t *styles.Styles, contentWidth int) string {
 	// Wrap the greeting and the message together: wrapping only the message
 	// leaves the greeting's own width unaccounted for and overflows the frame.
 	return crushLogo + "\n" +
-		t.ExitBanner.Text.Width(contentWidth).Render("Thanks for using Pascal! "+randomExitMessage())
+		t.ExitBanner.Text.Width(contentWidth).Render("Thanks for using Pascal! See you next time.")
 }
 
 // sessionResumeLines returns the "Session  <title>\nContinue crush -s <hash>"

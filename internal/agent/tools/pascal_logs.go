@@ -17,9 +17,9 @@ import (
 	"charm.land/fantasy"
 )
 
-const CrushLogsToolName = "crush_logs"
+const PascalLogsToolName = "pascal_logs"
 
-//go:embed crush_logs.md.tpl
+//go:embed pascal_logs.md.tpl
 var crushLogsDescriptionTmpl []byte
 
 var crushLogsDescriptionTpl = template.Must(
@@ -75,7 +75,7 @@ type CrushLogsParams struct {
 
 func NewCrushLogsTool(logFile string) fantasy.AgentTool {
 	return fantasy.NewAgentTool(
-		CrushLogsToolName,
+		PascalLogsToolName,
 		crushLogsDescription(),
 		func(ctx context.Context, params CrushLogsParams, call fantasy.ToolCall) (fantasy.ToolResponse, error) {
 			result := runCrushLogs(logFile, params)
