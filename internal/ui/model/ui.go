@@ -524,6 +524,7 @@ type UI struct {
 
 	// animClock drives every spinner, in the transcript and the chrome.
 	animClock animClock
+	shimmerRunning bool
 
 	// hyperCredits is the remaining Hyper credits as last fetched from
 	// the /v1/credits endpoint. It is nil when no fetch has reported a
@@ -1537,6 +1538,10 @@ func (m *UI) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.handleFrameGC()
 	case animTickMsg:
 		m.handleAnimTick(msg)
+	case shimmerTickMsg:
+		m.shimmerRunning = false
+		m.invalidateFrames()
+		cmds = append(cmds, m.ensureShimmer())
 	case scrollbarHideMsg:
 		if m.state == uiChat {
 			m.chat.HideScrollbar(msg.seq)
@@ -1792,9 +1797,12 @@ func (m *UI) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 // ensureAnimating arms the shared clock while a visible transcript item is
 // spinning or a subagent is running, whose spinners live in the chrome.
 func (m *UI) ensureAnimating() tea.Cmd {
-	return m.animClock.ensure(func() bool {
-		return m.subAgentsRunning > 0 || m.chat.hasVisibleAnimation()
-	})
+	return tea.Batch(
+		m.animClock.ensure(func() bool {
+			return m.subAgentsRunning > 0 || m.chat.hasVisibleAnimation()
+		}),
+		m.ensureShimmer(),
+	)
 }
 
 // handleAnimTick advances every visible spinner by one frame. A tick that
