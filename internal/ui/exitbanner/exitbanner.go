@@ -71,6 +71,7 @@ func logoSection(t *styles.Styles, contentWidth int) string {
 // sessionResumeLines returns the "Session  <title>\nContinue crush -s <hash>"
 // pair used by the exit banner.
 func sessionResumeLines(t *styles.Styles, sess *session.Session, contentWidth int) string {
+	return ""
 	title := strings.ReplaceAll(sess.Title, "\n", " ")
 
 	labelWidth := lipgloss.Width("Session  ")
