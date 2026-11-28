@@ -99,6 +99,7 @@ func TestModeRace(t *testing.T) {
 }
 
 func TestPermissionService_SkipMode(t *testing.T) {
+	t.Setenv("PASCAL_ALLOW_YOLO", "1")
 	t.Run("yolo mode auto-approves non-dangerous commands", func(t *testing.T) {
 		service := NewPermissionService("/tmp", []string{}, nil)
 		service.SetPermissionMode(PermissionModeYolo)

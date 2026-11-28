@@ -300,7 +300,7 @@ func (s *permissionService) Request(ctx context.Context, opts CreatePermissionRe
 	mode := s.mode
 	s.modeMu.RUnlock()
 
-	if mode.SkipsPrompts() {
+	if mode.SkipsPrompts() && YoloAllowed() {
 		return true, nil
 	}
 

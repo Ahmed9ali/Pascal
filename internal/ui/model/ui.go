@@ -4903,6 +4903,9 @@ func (m *UI) setPermissionMode(mode permission.PermissionMode) {
 // normal, so a sysadmin session that declines YOLO really does get its
 // prompts back rather than landing one rung down.
 func (m *UI) setYolo(on bool) {
+	if on && !permission.YoloAllowed() {
+		return
+	}
 	mode := permission.PermissionModeNormal
 	if on {
 		mode = permission.PermissionModeYolo

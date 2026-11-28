@@ -392,6 +392,9 @@ const sysadminModeWarning = "Warning: sysadmin mode is active. Every command is 
 func setupLocalWorkspace(cmd *cobra.Command, store *config.ConfigStore) (workspace.Workspace, func(), error) {
 	debug, _ := cmd.Flags().GetBool("debug")
 	yoloCount, _ := cmd.Flags().GetCount("yolo")
+	if yoloCount > 0 && !permission.YoloAllowed() {
+		return nil, nil, errors.New("yolo mode is disabled; set PASCAL_ALLOW_YOLO=1 to enable it")
+	}
 	channels, _ := cmd.Flags().GetStringSlice("channels")
 	ctx := cmd.Context()
 
@@ -542,6 +545,9 @@ func connectToServer(cmd *cobra.Command) (*client.Client, *proto.Workspace, func
 
 	debug, _ := cmd.Flags().GetBool("debug")
 	yoloCount, _ := cmd.Flags().GetCount("yolo")
+	if yoloCount > 0 && !permission.YoloAllowed() {
+		return nil, nil, nil, errors.New("yolo mode is disabled; set PASCAL_ALLOW_YOLO=1 to enable it")
+	}
 	channels, _ := cmd.Flags().GetStringSlice("channels")
 	dataDir, _ := cmd.Flags().GetString("data-dir")
 
