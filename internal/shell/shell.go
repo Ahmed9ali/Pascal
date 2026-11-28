@@ -45,9 +45,9 @@ const (
 // A fresh slice is returned on every call so callers may append freely.
 func CrushEnvMarkers() []string {
 	return []string{
-		"CRUSH=1",
-		"AGENT=crush",
-		"AI_AGENT=crush",
+		"PASCAL=1",
+		"AGENT=pascal",
+		"AI_AGENT=pascal",
 	}
 }
 

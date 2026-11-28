@@ -45,7 +45,7 @@ differences:
 
 Extract a field:
 ```sh
-echo '{"name":"crush"}' | jq '.name'
+echo '{"name":"pascal"}' | jq '.name'
 ```
 
 Filter an array:

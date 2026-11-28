@@ -17,11 +17,11 @@ Both are discovered together and deep-merged. Priority (highest to lowest):
 
 1. `.pascalrc` / `pascalrc` / `.pascal.json` / `pascal.json` (project-local,
    closer-to-cwd wins; Windows uses `.\.pascalrc` / `.\pascalrc`)
-2. `$XDG_CONFIG_HOME/crush/pascalrc` or `~/.config/crush/pascalrc`
-   (`%XDG_CONFIG_HOME%\crush\pascalrc` or
-   `%USERPROFILE%\.config\crush\pascalrc` on Windows)
+2. `$XDG_CONFIG_HOME/pascal/pascalrc` or `~/.config/pascal/pascalrc`
+   (`%XDG_CONFIG_HOME%\pascal\pascalrc` or
+   `%USERPROFILE%\.config\pascal\pascalrc` on Windows)
 
-Data directories (`~/.local/share/crush` and `%LOCALAPPDATA%\crush`) contain
+Data directories (`~/.local/share/pascal` and `%LOCALAPPDATA%\pascal`) contain
 machine-owned JSON state only; Pascal does not discover or execute a `pascalrc`
 from those locations.
 
@@ -39,7 +39,7 @@ earlier or pulled in via `source`.
 ```bash
 #!/usr/bin/env bash
 # Includes and secrets are just Bash.
-source ~/.config/crush/shared.sh
+source ~/.config/pascal/shared.sh
 
 provider add anthropic --api-key "$ANTHROPIC_API_KEY"
 
@@ -96,7 +96,7 @@ model large [<provider>/<id>] [flags]  # set the large slot; no arg prints it
 model small [<provider>/<id>] [flags]  # set the small slot; no arg prints it
 ```
 
-- `<provider>/<id>` is the same form `crush models` prints. A missing slash is
+- `<provider>/<id>` is the same form `pascal models` prints. A missing slash is
   an error. `model add` requires the provider to already exist.
 - `model add` flags: `--name`, `--context-window N`, `--default-max-tokens N`,
   `--thinking always|never|toggleable`, `--supports-images BOOL`,
@@ -206,7 +206,7 @@ option reset <list-key>    # clear a list option back to empty
   replacement must include `{{.AvailSkillXML}}` and a
   `{{range .ContextFiles}}<file path="{{.Path}}">{{.Content}}</file>{{end}}`
   loop (copy the blocks from the built-in `coder.md.tpl`) to keep them. For
-  one run, use `crush --prompt coder=./file.md.tpl` instead.
+  one run, use `pascal --prompt coder=./file.md.tpl` instead.
 - **Experimental** (unfinished, may change or disappear in any release):
   `option experimental client-server BOOL` runs the agent in a background
   server the TUI attaches to; `option experimental server-ready-timeout N`,

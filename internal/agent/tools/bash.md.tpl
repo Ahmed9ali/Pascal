@@ -106,7 +106,7 @@ Commit message here.
 Assisted-by: Pascal:{{ .ModelID }}
 {{ else if eq .Attribution.TrailerStyle "co-authored-by" }}
 
-Co-Authored-By: Pascal <crush@charm.land>
+Co-Authored-By: Pascal <noreply@pascal.local>
 {{ end }}
 EOF
 )"

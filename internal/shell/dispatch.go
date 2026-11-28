@@ -180,14 +180,14 @@ func dispatchShebang(ctx context.Context, scriptPath string, probe []byte, args 
 	sb, err := parseShebang(probe)
 	if err != nil {
 		hc := interp.HandlerCtx(ctx)
-		fmt.Fprintf(hc.Stderr, "crush: %s: %s\n", scriptPath, err)
+		fmt.Fprintf(hc.Stderr, "pascal: %s: %s\n", scriptPath, err)
 		return interp.ExitStatus(126)
 	}
 
 	interpreter, err := resolveInterpreter(sb.interpreter)
 	if err != nil {
 		hc := interp.HandlerCtx(ctx)
-		fmt.Fprintf(hc.Stderr, "crush: %s: %s\n", scriptPath, err)
+		fmt.Fprintf(hc.Stderr, "pascal: %s: %s\n", scriptPath, err)
 		return interp.ExitStatus(127)
 	}
 

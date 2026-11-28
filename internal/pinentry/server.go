@@ -77,7 +77,7 @@ func startIntegration(ctx context.Context, executable string, cacheTimeout time.
 		return nil, err
 	}
 
-	dir, err := os.MkdirTemp("", "crush-pinentry-sock-*")
+	dir, err := os.MkdirTemp("", "pascal-pinentry-sock-*")
 	if err != nil {
 		if wrapperCleanup != nil {
 			wrapperCleanup()

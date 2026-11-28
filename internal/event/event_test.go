@@ -51,7 +51,7 @@ func TestSetNonInteractive(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			t.Setenv("CRUSH", tt.pascal)
+			t.Setenv("PASCAL", tt.pascal)
 			SetNonInteractive(tt.nonInteractive)
 
 			if got := baseProps[nonInteractiveAttrName]; got != tt.nonInteractive {

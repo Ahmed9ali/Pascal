@@ -102,7 +102,7 @@ func WriteGPGWrapper(executable string) (string, func(), error) {
 	if runtime.GOOS == "windows" {
 		return "", nil, nil
 	}
-	dir, err := os.MkdirTemp("", "crush-pinentry-*")
+	dir, err := os.MkdirTemp("", "pascal-pinentry-*")
 	if err != nil {
 		return "", nil, err
 	}

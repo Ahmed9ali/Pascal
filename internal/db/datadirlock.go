@@ -15,11 +15,11 @@ import (
 )
 
 // ErrDataDirLocked is returned by Connect when the data directory is
-// already in use by another crush process.
-var ErrDataDirLocked = errors.New("data directory already in use by another crush process")
+// already in use by another pascal process.
+var ErrDataDirLocked = errors.New("data directory already in use by another pascal process")
 
 // dataDirLockFile is the name of the lock file inside the data
-// directory. It lives next to crush.db so users can `ls` and find it.
+// directory. It lives next to pascal.db so users can `ls` and find it.
 const dataDirLockFile = "pascal.lock"
 
 // dataDirOwnerInfo is the JSON payload written into the lock file by
@@ -40,7 +40,7 @@ type dataDirLock struct {
 }
 
 // acquireDataDirLock takes an exclusive non-blocking lock on
-// {dataDir}/crush.lock. If the lock is already held by another
+// {dataDir}/pascal.lock. If the lock is already held by another
 // process, it returns ErrDataDirLocked wrapped with a diagnostic that
 // includes whatever owner info that process wrote.
 //

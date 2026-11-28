@@ -566,7 +566,7 @@ func hasCredentialOperation(args []string) bool {
 // be re-read across retry attempts. Returns the file (positioned at 0)
 // and a cleanup function.
 func spoolStdin(r io.Reader) (*os.File, func(), error) {
-	f, err := os.CreateTemp("", "crush-gpg-stdin-*")
+	f, err := os.CreateTemp("", "pascal-gpg-stdin-*")
 	if err != nil {
 		return nil, nil, err
 	}

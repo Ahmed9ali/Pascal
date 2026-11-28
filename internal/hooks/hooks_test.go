@@ -215,9 +215,9 @@ func TestBuildEnv(t *testing.T) {
 	// Shared Pascal markers must be present so hook-authored scripts can
 	// detect they're running under Pascal the same way bash-tool-invoked
 	// scripts can.
-	require.Equal(t, "1", envMap["CRUSH"])
-	require.Equal(t, "crush", envMap["AGENT"])
-	require.Equal(t, "crush", envMap["AI_AGENT"])
+	require.Equal(t, "1", envMap["PASCAL"])
+	require.Equal(t, "pascal", envMap["AGENT"])
+	require.Equal(t, "pascal", envMap["AI_AGENT"])
 }
 
 func splitFirst(s, sep string) []string {
