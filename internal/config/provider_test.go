@@ -274,21 +274,21 @@ func TestCache_GetInvalidJSON(t *testing.T) {
 
 func TestCachePathFor(t *testing.T) {
 	tests := []struct {
-		name            string
+		name             string
 		pascalGlobalData string
-		xdgDataHome     string
-		expected        string
+		xdgDataHome      string
+		expected         string
 	}{
 		{
-			name:            "with PASCAL_GLOBAL_DATA",
+			name:             "with PASCAL_GLOBAL_DATA",
 			pascalGlobalData: "/scratch/data",
-			expected:        "/scratch/data/providers.json",
+			expected:         "/scratch/data/providers.json",
 		},
 		{
-			name:            "PASCAL_GLOBAL_DATA takes priority over XDG_DATA_HOME",
+			name:             "PASCAL_GLOBAL_DATA takes priority over XDG_DATA_HOME",
 			pascalGlobalData: "/scratch/data",
-			xdgDataHome:     "/custom/data",
-			expected:        "/scratch/data/providers.json",
+			xdgDataHome:      "/custom/data",
+			expected:         "/scratch/data/providers.json",
 		},
 		{
 			name:        "with XDG_DATA_HOME",

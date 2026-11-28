@@ -1345,7 +1345,8 @@ func detachedServerCmd(exe, dir string, args ...string) *exec.Cmd {
 }
 
 func shouldEnableMetrics(cfg *config.Config) bool {
-	if v, _ := strconv.ParseBool(os.Getenv("PASCAL_DISABLE_METRICS")); v {
+	// Pascal is a personal fork: telemetry is strictly opt-in.
+	if v, _ := strconv.ParseBool(os.Getenv("PASCAL_ENABLE_METRICS")); !v {
 		return false
 	}
 	if v, _ := strconv.ParseBool(os.Getenv("DO_NOT_TRACK")); v {

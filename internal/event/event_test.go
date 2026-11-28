@@ -22,7 +22,7 @@ func TestSetNonInteractive(t *testing.T) {
 	tests := []struct {
 		name                     string
 		nonInteractive           bool
-		pascal                    string
+		pascal                   string
 		wantNonInteractiveNested bool
 	}{
 		{
@@ -33,19 +33,19 @@ func TestSetNonInteractive(t *testing.T) {
 			nonInteractive: true,
 		},
 		{
-			name:  "interactive nested invocation",
+			name:   "interactive nested invocation",
 			pascal: "1",
 		},
 		{
 			name:                     "non-interactive nested invocation",
 			nonInteractive:           true,
-			pascal:                    "1",
+			pascal:                   "1",
 			wantNonInteractiveNested: true,
 		},
 		{
 			name:           "non-interactive invocation with unrecognized marker",
 			nonInteractive: true,
-			pascal:          "0",
+			pascal:         "0",
 		},
 	}
 

@@ -11,7 +11,6 @@ import (
 	"github.com/Ahmed9ali/Pascal/internal/ui/logo"
 	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	"github.com/Ahmed9ali/Pascal/internal/version"
-	"github.com/charmbracelet/x/ansi"
 )
 
 // FallbackWidth is used when stdout is not a terminal, so the banner still
@@ -70,20 +69,8 @@ func logoSection(t *styles.Styles, contentWidth int) string {
 
 // sessionResumeLines returns the "Session  <title>\nContinue crush -s <hash>"
 // pair used by the exit banner.
-func sessionResumeLines(t *styles.Styles, sess *session.Session, contentWidth int) string {
+func sessionResumeLines(_ *styles.Styles, _ *session.Session, _ int) string {
 	return ""
-	title := strings.ReplaceAll(sess.Title, "\n", " ")
-
-	labelWidth := lipgloss.Width("Session  ")
-	titleWidth := contentWidth - labelWidth
-	if titleWidth > 0 {
-		title = ansi.Truncate(title, titleWidth, "…")
-	}
-
-	hash := session.HashID(sess.ID)[:7]
-	sessionLine := t.ExitBanner.Label.Render("Session  ") + t.ExitBanner.Text.Render(title)
-	continueLine := t.ExitBanner.Label.Render("Continue ") + t.ExitBanner.Text.Render("pascal -s "+hash)
-	return sessionLine + "\n" + continueLine
 }
 
 // randomExitMessage returns a random exit message.

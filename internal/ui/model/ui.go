@@ -523,7 +523,7 @@ type UI struct {
 	subAgentsRunning int
 
 	// animClock drives every spinner, in the transcript and the chrome.
-	animClock animClock
+	animClock      animClock
 	shimmerRunning bool
 
 	// hyperCredits is the remaining Hyper credits as last fetched from

@@ -375,6 +375,7 @@ func TestLoadRefreshesChatGPTModelsWhenCatwalkUpdates(t *testing.T) {
 	// Not parallel: swaps package-level provider state and the fetch
 	// stub, and sets environment variables.
 	workDir, dataDir := isolateLoadEnv(t)
+	t.Setenv("PASCAL_ENABLE_PROVIDER_UPDATE", "1")
 	newCatwalkStub(t, http.StatusOK, []catwalk.Provider{{
 		Name:                "OpenAI",
 		ID:                  catwalk.InferenceProviderOpenAI,

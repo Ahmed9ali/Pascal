@@ -797,8 +797,11 @@ func (c *Config) setDefaults(workingDir, dataDir string) {
 	// Project specific skills dirs.
 	c.Options.SkillsPaths = append(c.Options.SkillsPaths, ProjectSkillsDir(workingDir)...)
 
-	if str, ok := os.LookupEnv("PASCAL_DISABLE_PROVIDER_AUTO_UPDATE"); ok {
-		c.Options.DisableProviderAutoUpdate, _ = strconv.ParseBool(str)
+	// Use the provider list bundled in the binary unless updates are requested.
+	c.Options.DisableProviderAutoUpdate = true
+	if str, ok := os.LookupEnv("PASCAL_ENABLE_PROVIDER_UPDATE"); ok {
+		on, _ := strconv.ParseBool(str)
+		c.Options.DisableProviderAutoUpdate = !on
 	}
 
 	if str, ok := os.LookupEnv("PASCAL_DISABLE_DEFAULT_PROVIDERS"); ok {
