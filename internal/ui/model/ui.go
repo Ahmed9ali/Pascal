@@ -4091,7 +4091,7 @@ func (m *UI) ShortHelp() []key.Binding {
 	tab := k.Tab
 	commands := k.Commands
 	if m.focus == uiFocusEditor && m.textarea.Value() == "" {
-		commands.SetHelp("/ or ctrl+p", "commands")
+		commands.SetHelp("type / or ctrl+p", "for commands")
 	}
 
 	switch m.state {
@@ -4157,7 +4157,6 @@ func (m *UI) ShortHelp() []key.Binding {
 		// if m.session == nil {
 		// no session selected
 		binds = append(binds,
-			k.Tab,
 			commands,
 			k.ShiftTab,
 			k.Models,
