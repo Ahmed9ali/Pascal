@@ -4629,7 +4629,7 @@ func (m *UI) generateLayout(w, h int) uiLayout {
 		}
 	}
 	// The sidebar width
-	sidebarWidth := 32
+	sidebarWidth := 38
 	// The header height
 	const landingHeaderHeight = 4
 
@@ -6149,7 +6149,7 @@ func (m *UI) handleQuestionNotification(_ question.Notification) {
 func (m *UI) editorContentWidth() int {
 	width := m.width - 2 // appRect horizontal margins
 	if m.state == uiChat && !m.isCompact {
-		width -= 30 // sidebar column
+		width -= 36 // sidebar column
 	}
 	return width
 }
