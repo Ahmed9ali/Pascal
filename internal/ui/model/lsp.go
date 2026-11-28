@@ -10,10 +10,10 @@ import (
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
 	"charm.land/x/nerdfont"
-	"github.com/ahmed/pascal/internal/lsp"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
-	"github.com/ahmed/pascal/internal/workspace"
+	"github.com/Ahmed9ali/Pascal/internal/lsp"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/workspace"
 	"github.com/charmbracelet/x/powernap/pkg/lsp/protocol"
 )
 

@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ahmed/pascal/internal/agent/tools/mcp"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/home"
-	"github.com/ahmed/pascal/internal/skills"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools/mcp"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/home"
+	"github.com/Ahmed9ali/Pascal/internal/skills"
 )
 
 var namedArgPattern = regexp.MustCompile(`\$([A-Z][A-Z0-9_]*)`)

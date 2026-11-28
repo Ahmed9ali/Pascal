@@ -11,8 +11,8 @@ import (
 
 	"charm.land/glamour/v2"
 	"charm.land/glamour/v2/ansi"
-	"github.com/ahmed/pascal/internal/ui/styles"
-	"github.com/ahmed/pascal/internal/ui/xchroma"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/ui/xchroma"
 	"github.com/alecthomas/chroma/v2"
 	"github.com/alecthomas/chroma/v2/formatters"
 	chromastyles "github.com/alecthomas/chroma/v2/styles"

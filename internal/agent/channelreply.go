@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ahmed/pascal/internal/agent/tools/mcp"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools/mcp"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/message"
 )
 
 // channelReplyTimeout bounds the auto-reply tool call so a wedged MCP

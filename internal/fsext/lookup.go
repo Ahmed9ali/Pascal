@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ahmed/pascal/internal/home"
+	"github.com/Ahmed9ali/Pascal/internal/home"
 )
 
 // Lookup searches for a target files or directories starting from dir

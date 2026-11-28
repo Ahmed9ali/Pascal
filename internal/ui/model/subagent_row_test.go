@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/ui/chat"
+	"github.com/Ahmed9ali/Pascal/internal/ui/chat"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/stretchr/testify/require"
 )

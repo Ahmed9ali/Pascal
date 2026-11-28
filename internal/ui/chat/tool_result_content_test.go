@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 )
 
 func TestHumanizedToolName(t *testing.T) {

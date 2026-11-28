@@ -4,7 +4,7 @@ import (
 	"image/color"
 	"sync"
 
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	"github.com/alecthomas/chroma/v2"
 	chromastyles "github.com/alecthomas/chroma/v2/styles"
 )

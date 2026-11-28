@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"charm.land/catwalk/v3/pkg/catwalk"
-	"github.com/ahmed/pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/message"
 )
 
 // CreateMessageParams represents parameters for creating a message.

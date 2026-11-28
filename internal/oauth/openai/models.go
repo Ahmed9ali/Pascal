@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"charm.land/catwalk/v3/pkg/catwalk"
-	"github.com/ahmed/pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
 )
 
 // ModelInfo mirrors one entry of the Codex backend model catalog.

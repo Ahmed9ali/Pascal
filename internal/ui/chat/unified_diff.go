@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/diffdetect"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/diffdetect"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 )
 
 type parsedDiffFile struct {

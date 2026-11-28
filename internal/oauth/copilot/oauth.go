@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ahmed/pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
 )
 
 const (

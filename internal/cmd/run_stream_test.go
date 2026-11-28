@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 	"github.com/stretchr/testify/require"
 )
 

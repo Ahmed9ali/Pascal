@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/agent/tools"
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 	"github.com/stretchr/testify/require"
 )
 

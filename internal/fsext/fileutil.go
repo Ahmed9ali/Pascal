@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ahmed/pascal/internal/csync"
-	"github.com/ahmed/pascal/internal/home"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/home"
 	"github.com/bmatcuk/doublestar/v4"
 	"github.com/charlievieth/fastwalk"
 	"github.com/charmbracelet/x/ansi"

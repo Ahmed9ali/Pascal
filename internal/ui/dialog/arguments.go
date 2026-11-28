@@ -14,9 +14,9 @@ import (
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 
-	"github.com/ahmed/pascal/internal/commands"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/util"
+	"github.com/Ahmed9ali/Pascal/internal/commands"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/util"
 	uv "github.com/charmbracelet/ultraviolet"
 )
 

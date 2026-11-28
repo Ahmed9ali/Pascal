@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 )
 
 // handlePostWorkspaceSSHAnswer resolves the pending integrated SSH

@@ -2,9 +2,9 @@ package model
 
 import (
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/agent/notify"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/ui/dialog"
+	"github.com/Ahmed9ali/Pascal/internal/agent/notify"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/ui/dialog"
 )
 
 // programStatusApp is the stable program name reported to the terminal.

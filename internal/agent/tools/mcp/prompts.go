@@ -5,8 +5,8 @@ import (
 	"iter"
 	"log/slog"
 
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
 

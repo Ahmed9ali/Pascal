@@ -6,11 +6,11 @@ import (
 	"strings"
 
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/session"
-	"github.com/ahmed/pascal/internal/ui/logo"
-	"github.com/ahmed/pascal/internal/ui/styles"
-	"github.com/ahmed/pascal/internal/version"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/ui/logo"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/version"
 	"github.com/charmbracelet/x/ansi"
 )
 

@@ -7,9 +7,9 @@ import (
 	"testing/synctest"
 	"time"
 
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/csync"
-	"github.com/ahmed/pascal/internal/env"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/env"
 	"github.com/charmbracelet/x/powernap/pkg/lsp/protocol"
 	"github.com/stretchr/testify/require"
 )

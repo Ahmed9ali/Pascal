@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/ahmed/pascal/internal/shell"
-	"github.com/ahmed/pascal/internal/version"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/version"
 )
 
 // loadTimeout bounds a single pascalrc execution. Config loading runs on the

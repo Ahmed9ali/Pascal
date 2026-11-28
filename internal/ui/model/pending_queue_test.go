@@ -3,12 +3,12 @@ package model
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/agent/notify"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/session"
-	"github.com/ahmed/pascal/internal/ui/chat"
-	"github.com/ahmed/pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/agent/notify"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/ui/chat"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
 	"github.com/stretchr/testify/require"
 )
 

@@ -6,9 +6,9 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"charm.land/catwalk/v3/pkg/catwalk"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/stretchr/testify/require"
 )

@@ -9,8 +9,8 @@ import (
 	"charm.land/bubbles/v2/key"
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	"github.com/charmbracelet/x/ansi"
 )
 

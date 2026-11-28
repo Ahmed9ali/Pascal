@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	"charm.land/catwalk/v3/pkg/catwalk"
-	"github.com/ahmed/pascal/internal/agent/hyper"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/discover"
+	"github.com/Ahmed9ali/Pascal/internal/agent/hyper"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/discover"
 	"github.com/invopop/jsonschema"
 	"github.com/spf13/cobra"
 )

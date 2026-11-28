@@ -6,10 +6,10 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/agent/tools/mcp"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/ui/dialog"
-	"github.com/ahmed/pascal/internal/workspace"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools/mcp"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/ui/dialog"
+	"github.com/Ahmed9ali/Pascal/internal/workspace"
 	"github.com/stretchr/testify/require"
 )
 

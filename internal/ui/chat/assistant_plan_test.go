@@ -7,9 +7,9 @@ import (
 	"testing"
 
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/stretchr/testify/require"

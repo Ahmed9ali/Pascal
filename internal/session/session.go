@@ -10,9 +10,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ahmed/pascal/internal/db"
-	"github.com/ahmed/pascal/internal/event"
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/db"
+	"github.com/Ahmed9ali/Pascal/internal/event"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 	"github.com/google/uuid"
 	"github.com/zeebo/xxh3"
 )

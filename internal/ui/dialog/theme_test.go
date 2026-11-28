@@ -3,7 +3,7 @@ package dialog
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/ui/list"
+	"github.com/Ahmed9ali/Pascal/internal/ui/list"
 	"github.com/stretchr/testify/require"
 )
 

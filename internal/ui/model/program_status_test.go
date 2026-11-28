@@ -4,12 +4,12 @@ import (
 	"testing"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/agent/notify"
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/question"
-	"github.com/ahmed/pascal/internal/session"
-	"github.com/ahmed/pascal/internal/ui/dialog"
+	"github.com/Ahmed9ali/Pascal/internal/agent/notify"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/question"
+	"github.com/Ahmed9ali/Pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/ui/dialog"
 	"github.com/stretchr/testify/require"
 )
 

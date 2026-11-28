@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/csync"
-	"github.com/ahmed/pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
 	"github.com/stretchr/testify/require"
 )
 

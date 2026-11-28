@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
 	"github.com/stretchr/testify/require"
 )
 

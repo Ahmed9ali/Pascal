@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/ahmed/pascal/internal/ui/diffview"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/ui/diffview"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 )
 
 // DiffFormatter returns a diff formatter with the given styles that can be

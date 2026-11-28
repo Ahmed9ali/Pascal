@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/lsp"
+	"github.com/Ahmed9ali/Pascal/internal/lsp"
 )
 
 type CallHierarchyParams struct {

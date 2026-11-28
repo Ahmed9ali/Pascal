@@ -17,11 +17,11 @@ import (
 	"unicode/utf8"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/filepathext"
-	"github.com/ahmed/pascal/internal/filetracker"
-	"github.com/ahmed/pascal/internal/lsp"
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/skills"
+	"github.com/Ahmed9ali/Pascal/internal/filepathext"
+	"github.com/Ahmed9ali/Pascal/internal/filetracker"
+	"github.com/Ahmed9ali/Pascal/internal/lsp"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/skills"
 )
 
 //go:embed view.md.tpl

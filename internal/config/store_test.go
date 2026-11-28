@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/csync"
-	"github.com/ahmed/pascal/internal/oauth"
-	"github.com/ahmed/pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
 	"github.com/stretchr/testify/require"
 	"github.com/tidwall/gjson"
 )

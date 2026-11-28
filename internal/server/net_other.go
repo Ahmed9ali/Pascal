@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ahmed/pascal/internal/lock"
+	"github.com/Ahmed9ali/Pascal/internal/lock"
 )
 
 // staleSocketDialTimeout bounds the probe used to detect whether a Unix

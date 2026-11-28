@@ -8,10 +8,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/app"
-	"github.com/ahmed/pascal/internal/backend"
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/app"
+	"github.com/Ahmed9ali/Pascal/internal/backend"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/session"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

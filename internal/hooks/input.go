@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
 	"github.com/tidwall/gjson"
 )
 

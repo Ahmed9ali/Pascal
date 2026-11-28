@@ -12,8 +12,8 @@ import (
 	"time"
 
 	"charm.land/log/v2"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/server"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/server"
 	"github.com/charmbracelet/colorprofile"
 	"github.com/charmbracelet/x/term"
 	"github.com/nxadm/tail"

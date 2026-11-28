@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ahmed/pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
 )
 
 // abandonGrace is how long runOne waits after ctx cancellation for the

@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ahmed/pascal/internal/pinentry"
+	"github.com/Ahmed9ali/Pascal/internal/pinentry"
 )
 
 func main() {

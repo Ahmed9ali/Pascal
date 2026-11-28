@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/oauth"
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 	"github.com/stretchr/testify/require"
 )
 

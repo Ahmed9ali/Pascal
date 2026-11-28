@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/permission/testutil"
+	"github.com/Ahmed9ali/Pascal/internal/permission/testutil"
 	"github.com/stretchr/testify/require"
 )
 

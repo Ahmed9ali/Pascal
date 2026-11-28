@@ -3,7 +3,7 @@ package config
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/hooks"
+	"github.com/Ahmed9ali/Pascal/internal/hooks"
 	"github.com/stretchr/testify/require"
 )
 

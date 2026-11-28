@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
 )
 
 const (

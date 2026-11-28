@@ -16,7 +16,7 @@ import (
 	"charm.land/fantasy/providers/anthropic"
 	"charm.land/fantasy/providers/google"
 	"charm.land/fantasy/providers/openai"
-	"github.com/ahmed/pascal/internal/stringext"
+	"github.com/Ahmed9ali/Pascal/internal/stringext"
 	"github.com/charmbracelet/x/ansi"
 )
 

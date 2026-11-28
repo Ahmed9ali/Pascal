@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/ahmed/pascal/internal/version"
+	"github.com/Ahmed9ali/Pascal/internal/version"
 	"github.com/posthog/posthog-go"
 )
 

@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/ui/dialog"
+	"github.com/Ahmed9ali/Pascal/internal/ui/dialog"
 	"github.com/stretchr/testify/require"
 )
 

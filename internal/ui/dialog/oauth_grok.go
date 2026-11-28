@@ -6,9 +6,9 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"charm.land/catwalk/v3/pkg/catwalk"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/oauth/grok"
-	"github.com/ahmed/pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/oauth/grok"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
 )
 
 // NewOAuthGrok creates an OAuth dialog for signing in with a Grok

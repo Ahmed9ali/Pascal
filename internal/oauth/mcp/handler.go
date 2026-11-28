@@ -16,8 +16,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ahmed/pascal/internal/oauth"
-	"github.com/ahmed/pascal/internal/oauth/callback"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/oauth/callback"
 	"github.com/modelcontextprotocol/go-sdk/auth"
 	"github.com/modelcontextprotocol/go-sdk/oauthex"
 	"github.com/pkg/browser"

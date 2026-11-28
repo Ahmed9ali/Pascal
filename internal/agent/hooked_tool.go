@@ -7,9 +7,9 @@ import (
 	"strings"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/agent/tools"
-	"github.com/ahmed/pascal/internal/hooks"
-	"github.com/ahmed/pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools"
+	"github.com/Ahmed9ali/Pascal/internal/hooks"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
 	"github.com/tidwall/sjson"
 )
 

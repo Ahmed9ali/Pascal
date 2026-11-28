@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/message"
 )
 
 // PersistOutput stores a bang-mode shell command result as a user message.

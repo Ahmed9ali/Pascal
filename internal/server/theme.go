@@ -5,8 +5,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 )
 
 // maxHostThemeBody bounds the body of a host theme request. A complete

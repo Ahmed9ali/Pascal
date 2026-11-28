@@ -6,8 +6,8 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/ahmed/pascal/internal/oauth"
-	"github.com/ahmed/pascal/internal/oauth/callback"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/oauth/callback"
 )
 
 // The redirect URI must be a loopback address on a port OpenAI's

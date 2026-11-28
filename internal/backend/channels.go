@@ -6,9 +6,9 @@ import (
 	"sort"
 	"sync"
 
-	mcptools "github.com/ahmed/pascal/internal/agent/tools/mcp"
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/session"
+	mcptools "github.com/Ahmed9ali/Pascal/internal/agent/tools/mcp"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/session"
 )
 
 // channelSessionStore is the slice of session.Service the channel router

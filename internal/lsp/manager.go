@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/csync"
-	"github.com/ahmed/pascal/internal/fsext"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/fsext"
 	powernapconfig "github.com/charmbracelet/x/powernap/pkg/config"
 	powernap "github.com/charmbracelet/x/powernap/pkg/lsp"
 	"github.com/sourcegraph/jsonrpc2"

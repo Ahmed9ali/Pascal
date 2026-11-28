@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/ahmed/pascal/internal/hooks"
+	"github.com/Ahmed9ali/Pascal/internal/hooks"
 )
 
 // ValidateHooks normalizes event names and checks that every configured

@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/oauth"
-	"github.com/ahmed/pascal/internal/oauth/callback"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/oauth/callback"
 )
 
 const (

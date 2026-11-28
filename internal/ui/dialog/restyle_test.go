@@ -5,12 +5,12 @@ import (
 	"testing"
 
 	"charm.land/bubbles/v2/textarea"
-	"github.com/ahmed/pascal/internal/agent/tools"
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/question"
-	"github.com/ahmed/pascal/internal/session"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/question"
+	"github.com/Ahmed9ali/Pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/stretchr/testify/require"
 )

@@ -7,12 +7,12 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/app"
-	"github.com/ahmed/pascal/internal/db"
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/question"
-	"github.com/ahmed/pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/app"
+	"github.com/Ahmed9ali/Pascal/internal/db"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/question"
+	"github.com/Ahmed9ali/Pascal/internal/session"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

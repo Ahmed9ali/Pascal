@@ -3,9 +3,9 @@ package model
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/pinentry"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/pinentry"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	"github.com/stretchr/testify/require"
 )
 

@@ -14,7 +14,7 @@ import (
 	"charm.land/bubbles/v2/textinput"
 	"charm.land/glamour/v2/ansi"
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/ui/diffview"
+	"github.com/Ahmed9ali/Pascal/internal/ui/diffview"
 	"github.com/alecthomas/chroma/v2"
 	uv "github.com/charmbracelet/ultraviolet"
 )

@@ -11,9 +11,9 @@ import (
 
 	"charm.land/fantasy"
 
-	"github.com/ahmed/pascal/internal/agent/prompt"
-	"github.com/ahmed/pascal/internal/agent/tools"
-	"github.com/ahmed/pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/agent/prompt"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
 )
 
 //go:embed templates/agentic_fetch.md

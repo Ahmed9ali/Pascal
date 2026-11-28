@@ -12,8 +12,8 @@ import (
 	"testing"
 
 	"charm.land/catwalk/v3/pkg/catwalk"
-	"github.com/ahmed/pascal/internal/csync"
-	"github.com/ahmed/pascal/internal/env"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/env"
 	"github.com/stretchr/testify/require"
 )
 

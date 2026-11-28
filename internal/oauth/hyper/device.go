@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ahmed/pascal/internal/agent/hyper"
-	"github.com/ahmed/pascal/internal/event"
-	"github.com/ahmed/pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/agent/hyper"
+	"github.com/Ahmed9ali/Pascal/internal/event"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
 )
 
 // DeviceAuthResponse contains the response from the device authorization endpoint.

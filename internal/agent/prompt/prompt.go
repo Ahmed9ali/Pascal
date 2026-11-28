@@ -13,12 +13,12 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/filepathext"
-	"github.com/ahmed/pascal/internal/gitutil"
-	"github.com/ahmed/pascal/internal/home"
-	"github.com/ahmed/pascal/internal/shell"
-	"github.com/ahmed/pascal/internal/skills"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/filepathext"
+	"github.com/Ahmed9ali/Pascal/internal/gitutil"
+	"github.com/Ahmed9ali/Pascal/internal/home"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/skills"
 )
 
 // Prompt represents a template-based prompt generator.

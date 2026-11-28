@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/ui/chat"
+	"github.com/Ahmed9ali/Pascal/internal/ui/chat"
 	"github.com/stretchr/testify/require"
 )
 

@@ -8,10 +8,10 @@ import (
 	"os/signal"
 
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/login"
-	"github.com/ahmed/pascal/internal/oauth/copilot"
-	"github.com/ahmed/pascal/internal/workspace"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/login"
+	"github.com/Ahmed9ali/Pascal/internal/oauth/copilot"
+	"github.com/Ahmed9ali/Pascal/internal/workspace"
 	"github.com/spf13/cobra"
 )
 

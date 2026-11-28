@@ -25,25 +25,25 @@ import (
 	fang "charm.land/fang/v2"
 	"charm.land/lipgloss/v2"
 	"charm.land/tone"
-	"github.com/ahmed/pascal/internal/app"
-	"github.com/ahmed/pascal/internal/client"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/db"
-	"github.com/ahmed/pascal/internal/event"
-	"github.com/ahmed/pascal/internal/lock"
-	crushlog "github.com/ahmed/pascal/internal/log"
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/projects"
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/server"
-	"github.com/ahmed/pascal/internal/session"
-	"github.com/ahmed/pascal/internal/skills"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/exitbanner"
-	ui "github.com/ahmed/pascal/internal/ui/model"
-	"github.com/ahmed/pascal/internal/ui/styles"
-	"github.com/ahmed/pascal/internal/version"
-	"github.com/ahmed/pascal/internal/workspace"
+	"github.com/Ahmed9ali/Pascal/internal/app"
+	"github.com/Ahmed9ali/Pascal/internal/client"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/db"
+	"github.com/Ahmed9ali/Pascal/internal/event"
+	"github.com/Ahmed9ali/Pascal/internal/lock"
+	crushlog "github.com/Ahmed9ali/Pascal/internal/log"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/projects"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/server"
+	"github.com/Ahmed9ali/Pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/skills"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/exitbanner"
+	ui "github.com/Ahmed9ali/Pascal/internal/ui/model"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/version"
+	"github.com/Ahmed9ali/Pascal/internal/workspace"
 	"github.com/charmbracelet/colorprofile"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/charmbracelet/x/ansi"
@@ -180,7 +180,7 @@ pascal --continue
 		if err != nil {
 			event.Error(err)
 			slog.Error("TUI run error", "error", err)
-			return errors.New("Pascal crashed. If metrics are enabled, we were notified about it. If you'd like to report it, please copy the stacktrace above and open an issue at https://github.com/ahmed/pascal/issues/new?template=bug.yml") //nolint:staticcheck
+			return errors.New("Pascal crashed. If metrics are enabled, we were notified about it. If you'd like to report it, please copy the stacktrace above and open an issue at https://github.com/Ahmed9ali/Pascal/issues/new?template=bug.yml") //nolint:staticcheck
 		}
 		var banner config.ExitBanner
 		if cfg := com.Config(); cfg != nil {

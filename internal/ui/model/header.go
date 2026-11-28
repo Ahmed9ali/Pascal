@@ -7,11 +7,11 @@ import (
 
 	"charm.land/lipgloss/v2"
 	"charm.land/x/nerdfont"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/fsext"
-	"github.com/ahmed/pascal/internal/session"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/fsext"
+	"github.com/Ahmed9ali/Pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/charmbracelet/x/ansi"
 )

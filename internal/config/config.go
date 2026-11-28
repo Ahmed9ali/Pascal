@@ -14,11 +14,11 @@ import (
 	"time"
 
 	"charm.land/catwalk/v3/pkg/catwalk"
-	"github.com/ahmed/pascal/internal/csync"
-	"github.com/ahmed/pascal/internal/hooks"
-	"github.com/ahmed/pascal/internal/oauth"
-	"github.com/ahmed/pascal/internal/oauth/copilot"
-	"github.com/ahmed/pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/hooks"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/oauth/copilot"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
 	"github.com/invopop/jsonschema"
 )
 

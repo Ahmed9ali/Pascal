@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/sshaskpass"
+	"github.com/Ahmed9ali/Pascal/internal/sshaskpass"
 	"github.com/spf13/cobra"
 )
 

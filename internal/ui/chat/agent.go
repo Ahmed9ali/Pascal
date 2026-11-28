@@ -8,9 +8,9 @@ import (
 
 	"charm.land/lipgloss/v2"
 	"charm.land/lipgloss/v2/tree"
-	"github.com/ahmed/pascal/internal/agent"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/agent"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	"github.com/charmbracelet/x/ansi"
 )
 

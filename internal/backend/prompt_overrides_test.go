@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/backend"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/backend"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

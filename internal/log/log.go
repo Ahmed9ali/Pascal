@@ -11,7 +11,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ahmed/pascal/internal/event"
+	"github.com/Ahmed9ali/Pascal/internal/event"
 	"github.com/charmbracelet/x/term"
 	"gopkg.in/natefinch/lumberjack.v2"
 )
@@ -121,7 +121,7 @@ func (f *switchableFile) Close() error {
 }
 
 // modulePath is the path prefix source paths are trimmed to.
-const modulePath = "github.com/ahmed/pascal/"
+const modulePath = "github.com/Ahmed9ali/Pascal/"
 
 // trimSourcePath shortens an absolute source path so build-machine
 // directories never appear in logs. It trims to the module path, the

@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/session"
-	"github.com/ahmed/pascal/internal/ui/attachments"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/ui/attachments"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/stretchr/testify/require"
 )

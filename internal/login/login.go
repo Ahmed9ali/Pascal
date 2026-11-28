@@ -15,11 +15,11 @@ import (
 	"github.com/charmbracelet/x/term"
 	"github.com/pkg/browser"
 
-	"github.com/ahmed/pascal/internal/oauth"
-	"github.com/ahmed/pascal/internal/oauth/copilot"
-	"github.com/ahmed/pascal/internal/oauth/grok"
-	"github.com/ahmed/pascal/internal/oauth/hyper"
-	"github.com/ahmed/pascal/internal/oauth/openai"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/oauth/copilot"
+	"github.com/Ahmed9ali/Pascal/internal/oauth/grok"
+	"github.com/Ahmed9ali/Pascal/internal/oauth/hyper"
+	"github.com/Ahmed9ali/Pascal/internal/oauth/openai"
 )
 
 // Platforms accepted by Run.

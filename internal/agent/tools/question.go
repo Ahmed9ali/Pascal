@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/question"
+	"github.com/Ahmed9ali/Pascal/internal/question"
 )
 
 const QuestionToolName = "question"

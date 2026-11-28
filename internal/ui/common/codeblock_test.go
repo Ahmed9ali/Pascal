@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"charm.land/glamour/v2"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	"github.com/alecthomas/chroma/v2"
 	"github.com/stretchr/testify/require"
 )

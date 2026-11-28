@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"charm.land/catwalk/v3/pkg/catwalk"
-	"github.com/ahmed/pascal/internal/discover"
+	"github.com/Ahmed9ali/Pascal/internal/discover"
 )
 
 // discoveryProbeTimeout bounds the inline probe of a provider that has no

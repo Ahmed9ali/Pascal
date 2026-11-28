@@ -3,8 +3,8 @@ package model
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/ui/util"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/ui/util"
 	"github.com/stretchr/testify/require"
 )
 

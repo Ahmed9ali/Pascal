@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ahmed/pascal/internal/hooks"
-	"github.com/ahmed/pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/hooks"
+	"github.com/Ahmed9ali/Pascal/internal/message"
 )
 
 // ErrCompactionBlocked is returned by Summarize when a PreCompact hook

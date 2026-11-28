@@ -3,7 +3,7 @@ package config
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/env"
+	"github.com/Ahmed9ali/Pascal/internal/env"
 	"github.com/stretchr/testify/require"
 )
 

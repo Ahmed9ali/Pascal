@@ -1,8 +1,8 @@
 package backend
 
 import (
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/question"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/question"
 )
 
 // AnswerQuestion submits answers for the question batch the request

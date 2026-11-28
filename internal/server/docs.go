@@ -3,7 +3,7 @@ package server
 import (
 	"net/http"
 
-	"github.com/ahmed/pascal/internal/apigen"
+	"github.com/Ahmed9ali/Pascal/internal/apigen"
 )
 
 // apiInfo is the top-level metadata for the Pascal API documentation.

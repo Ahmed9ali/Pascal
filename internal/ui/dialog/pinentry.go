@@ -8,8 +8,8 @@ import (
 	"charm.land/bubbles/v2/textinput"
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/pinentry"
-	"github.com/ahmed/pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/pinentry"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
 	uv "github.com/charmbracelet/ultraviolet"
 )
 

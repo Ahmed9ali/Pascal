@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/ahmed/pascal/internal/csync"
-	"github.com/ahmed/pascal/internal/lsp"
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/lsp"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 )
 
 // LSPEventType represents the type of LSP event

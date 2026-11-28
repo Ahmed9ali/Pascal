@@ -9,16 +9,16 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"charm.land/catwalk/v3/pkg/catwalk"
-	"github.com/ahmed/pascal/internal/commands"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/oauth"
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/session"
-	"github.com/ahmed/pascal/internal/skills"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
-	"github.com/ahmed/pascal/internal/ui/util"
+	"github.com/Ahmed9ali/Pascal/internal/commands"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/skills"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/ui/util"
 )
 
 // ActionClose is a message to close the current dialog.

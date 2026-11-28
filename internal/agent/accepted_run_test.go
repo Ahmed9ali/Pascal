@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/message"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

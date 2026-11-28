@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

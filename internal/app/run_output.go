@@ -8,9 +8,9 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/agent"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/agent"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 )
 
 // messageLister lists the stored messages of a session.

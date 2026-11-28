@@ -9,13 +9,13 @@ import (
 	"strings"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/diff"
-	"github.com/ahmed/pascal/internal/filepathext"
-	"github.com/ahmed/pascal/internal/filetracker"
-	"github.com/ahmed/pascal/internal/fsext"
-	"github.com/ahmed/pascal/internal/history"
-	"github.com/ahmed/pascal/internal/lsp"
-	"github.com/ahmed/pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/diff"
+	"github.com/Ahmed9ali/Pascal/internal/filepathext"
+	"github.com/Ahmed9ali/Pascal/internal/filetracker"
+	"github.com/Ahmed9ali/Pascal/internal/fsext"
+	"github.com/Ahmed9ali/Pascal/internal/history"
+	"github.com/Ahmed9ali/Pascal/internal/lsp"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
 )
 
 type MultiEditOperation struct {

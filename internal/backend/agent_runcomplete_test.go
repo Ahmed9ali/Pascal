@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/agent"
-	"github.com/ahmed/pascal/internal/app"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/agent"
+	"github.com/Ahmed9ali/Pascal/internal/app"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

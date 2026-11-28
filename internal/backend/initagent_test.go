@@ -7,7 +7,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/agent"
+	"github.com/Ahmed9ali/Pascal/internal/agent"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

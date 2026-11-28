@@ -4,10 +4,10 @@ import (
 	"context"
 	"sync"
 
-	"github.com/ahmed/pascal/internal/agent/notify"
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/question"
+	"github.com/Ahmed9ali/Pascal/internal/agent/notify"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/question"
 )
 
 // NewForTest constructs a minimal [App] suitable for in-process tests

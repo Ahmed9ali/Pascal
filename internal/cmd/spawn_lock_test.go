@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/lock"
+	"github.com/Ahmed9ali/Pascal/internal/lock"
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/require"
 )

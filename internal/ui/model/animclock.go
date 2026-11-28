@@ -4,7 +4,7 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/ui/anim"
+	"github.com/Ahmed9ali/Pascal/internal/ui/anim"
 )
 
 // animTickMsg is one frame of the shared animation clock. gen is the clock

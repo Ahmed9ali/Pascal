@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/agent"
-	"github.com/ahmed/pascal/internal/ui/anim"
-	"github.com/ahmed/pascal/internal/ui/chat"
-	"github.com/ahmed/pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/agent"
+	"github.com/Ahmed9ali/Pascal/internal/ui/anim"
+	"github.com/Ahmed9ali/Pascal/internal/ui/chat"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
 )
 
 // subAgentSpinnerFrames animates the running marker. The sidebar is rebuilt

@@ -5,14 +5,14 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/agent/notify"
-	"github.com/ahmed/pascal/internal/agent/tools"
-	"github.com/ahmed/pascal/internal/agent/tools/mcp"
-	"github.com/ahmed/pascal/internal/app"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/skills"
+	"github.com/Ahmed9ali/Pascal/internal/agent/notify"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools/mcp"
+	"github.com/Ahmed9ali/Pascal/internal/app"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/skills"
 	"github.com/stretchr/testify/require"
 )
 

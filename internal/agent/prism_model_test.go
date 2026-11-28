@@ -9,10 +9,10 @@ import (
 
 	"charm.land/catwalk/v3/pkg/catwalk"
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/agent/hyper"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/csync"
-	"github.com/ahmed/pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/agent/hyper"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/message"
 
 	"charm.land/fantasy/providers/openai"
 	"github.com/stretchr/testify/require"

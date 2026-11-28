@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/message"
 	"github.com/stretchr/testify/require"
 )
 

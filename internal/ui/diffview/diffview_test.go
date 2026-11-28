@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/ui/diffview"
+	"github.com/Ahmed9ali/Pascal/internal/ui/diffview"
 	"github.com/alecthomas/chroma/v2/styles"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/charmbracelet/x/exp/golden"

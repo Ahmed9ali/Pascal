@@ -5,11 +5,11 @@ import (
 	"testing"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/question"
-	"github.com/ahmed/pascal/internal/ui/chat"
-	"github.com/ahmed/pascal/internal/ui/dialog"
-	"github.com/ahmed/pascal/internal/ui/notification"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/question"
+	"github.com/Ahmed9ali/Pascal/internal/ui/chat"
+	"github.com/Ahmed9ali/Pascal/internal/ui/dialog"
+	"github.com/Ahmed9ali/Pascal/internal/ui/notification"
 	"github.com/stretchr/testify/require"
 )
 

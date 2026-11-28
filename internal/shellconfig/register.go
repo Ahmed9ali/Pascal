@@ -15,7 +15,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ahmed/pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
 )
 
 func init() {

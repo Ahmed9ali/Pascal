@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/shell"
-	"github.com/ahmed/pascal/internal/version"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/version"
 	"github.com/stretchr/testify/require"
 )
 

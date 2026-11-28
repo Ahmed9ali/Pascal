@@ -16,8 +16,8 @@ import (
 
 	"charm.land/catwalk/v3/pkg/catwalk"
 	"charm.land/catwalk/v3/pkg/embedded"
-	"github.com/ahmed/pascal/internal/agent/hyper"
-	"github.com/ahmed/pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/agent/hyper"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
 	"github.com/charmbracelet/x/etag"
 )
 

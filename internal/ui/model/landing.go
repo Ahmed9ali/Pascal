@@ -4,8 +4,8 @@ import (
 	"image"
 
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/workspace"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/workspace"
 	"github.com/charmbracelet/ultraviolet/layout"
 )
 

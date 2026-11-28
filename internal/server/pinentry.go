@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 )
 
 // handlePostWorkspacePinentryAnswer resolves the pending integrated

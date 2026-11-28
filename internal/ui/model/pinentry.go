@@ -6,10 +6,10 @@ import (
 	"os"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/pinentry"
-	"github.com/ahmed/pascal/internal/ui/dialog"
-	"github.com/ahmed/pascal/internal/ui/notification"
-	"github.com/ahmed/pascal/internal/ui/util"
+	"github.com/Ahmed9ali/Pascal/internal/pinentry"
+	"github.com/Ahmed9ali/Pascal/internal/ui/dialog"
+	"github.com/Ahmed9ali/Pascal/internal/ui/notification"
+	"github.com/Ahmed9ali/Pascal/internal/ui/util"
 )
 
 // pinentryTouchMessage is shown in the status bar while gpg waits for a

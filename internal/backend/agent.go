@@ -5,14 +5,14 @@ import (
 	"errors"
 	"os"
 
-	"github.com/ahmed/pascal/internal/agent"
-	"github.com/ahmed/pascal/internal/agent/notify"
-	mcptools "github.com/ahmed/pascal/internal/agent/tools/mcp"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/agent"
+	"github.com/Ahmed9ali/Pascal/internal/agent/notify"
+	mcptools "github.com/Ahmed9ali/Pascal/internal/agent/tools/mcp"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
 )
 
 // SendMessage validates and accepts a prompt for the workspace's agent,

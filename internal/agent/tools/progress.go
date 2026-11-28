@@ -5,8 +5,8 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
 )
 
 const (

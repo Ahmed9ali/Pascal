@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/home"
+	"github.com/Ahmed9ali/Pascal/internal/home"
 	"github.com/stretchr/testify/require"
 )
 

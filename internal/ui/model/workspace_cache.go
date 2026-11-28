@@ -28,12 +28,12 @@ import (
 	"slices"
 	"time"
 
-	"github.com/ahmed/pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/message"
 
 	tea "charm.land/bubbletea/v2"
 
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/workspace"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/workspace"
 )
 
 // busyCacheTTL bounds how long the memoized busy/permission state may go

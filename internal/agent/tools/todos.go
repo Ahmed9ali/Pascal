@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/session"
 )
 
 //go:embed todos.md

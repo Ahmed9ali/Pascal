@@ -21,7 +21,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ahmed/pascal/internal/pinentry"
+	"github.com/Ahmed9ali/Pascal/internal/pinentry"
 	"github.com/charmbracelet/x/exp/slice"
 	"mvdan.cc/sh/v3/expand"
 	"mvdan.cc/sh/v3/interp"

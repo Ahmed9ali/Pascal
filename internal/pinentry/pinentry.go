@@ -24,7 +24,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 )
 
 // Event describes the state of terminal-based GPG pinentry dialogs.

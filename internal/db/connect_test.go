@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/lock"
+	"github.com/Ahmed9ali/Pascal/internal/lock"
 	"github.com/stretchr/testify/require"
 )
 

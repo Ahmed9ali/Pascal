@@ -6,12 +6,12 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/ui/attachments"
-	"github.com/ahmed/pascal/internal/ui/chat"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/dialog"
-	"github.com/ahmed/pascal/internal/ui/list"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/ui/attachments"
+	"github.com/Ahmed9ali/Pascal/internal/ui/chat"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/dialog"
+	"github.com/Ahmed9ali/Pascal/internal/ui/list"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/stretchr/testify/require"
 )

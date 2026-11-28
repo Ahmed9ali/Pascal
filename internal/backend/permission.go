@@ -1,8 +1,8 @@
 package backend
 
 import (
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 )
 
 // GrantPermission grants, denies, or persistently grants a permission

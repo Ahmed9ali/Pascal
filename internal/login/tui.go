@@ -17,7 +17,7 @@ import (
 	"github.com/charmbracelet/x/ansi"
 	"github.com/pkg/browser"
 
-	"github.com/ahmed/pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
 )
 
 // authState represents the state of the OAuth TUI flow.

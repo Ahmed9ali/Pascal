@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/lock"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/lock"
 )
 
 const projectsFileName = "projects.json"

@@ -10,12 +10,12 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/sshaskpass"
+	"github.com/Ahmed9ali/Pascal/internal/sshaskpass"
 	"mvdan.cc/sh/v3/expand"
 	"mvdan.cc/sh/v3/interp"
 	"mvdan.cc/sh/v3/syntax"
 
-	"github.com/ahmed/pascal/internal/pinentry"
+	"github.com/Ahmed9ali/Pascal/internal/pinentry"
 )
 
 // RunOptions configures a single stateless shell execution via [Run].

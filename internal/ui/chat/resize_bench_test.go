@@ -5,10 +5,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/db"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/ui/list"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/db"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/ui/list"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 )
 
 // BenchmarkResizeSession reproduces the resize re-render path over a real

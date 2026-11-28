@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/question"
-	"github.com/ahmed/pascal/internal/ui/attachments"
-	"github.com/ahmed/pascal/internal/ui/dialog"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/question"
+	"github.com/Ahmed9ali/Pascal/internal/ui/attachments"
+	"github.com/Ahmed9ali/Pascal/internal/ui/dialog"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/stretchr/testify/require"
 )

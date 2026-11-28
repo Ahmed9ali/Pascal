@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/skills"
+	"github.com/Ahmed9ali/Pascal/internal/skills"
 	"github.com/stretchr/testify/require"
 )
 

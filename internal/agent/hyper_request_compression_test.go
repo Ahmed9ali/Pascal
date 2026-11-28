@@ -17,8 +17,8 @@ import (
 
 	"charm.land/catwalk/v3/pkg/catwalk"
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/agent/hyper"
-	"github.com/ahmed/pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/agent/hyper"
+	"github.com/Ahmed9ali/Pascal/internal/config"
 	brrr "github.com/molecule-man/go-brrr"
 	"github.com/stretchr/testify/require"
 )

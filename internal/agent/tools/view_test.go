@@ -11,10 +11,10 @@ import (
 	"time"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/filetracker"
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/permission/testutil"
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/filetracker"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/permission/testutil"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 	"github.com/stretchr/testify/require"
 )
 

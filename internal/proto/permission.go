@@ -3,7 +3,7 @@ package proto
 import (
 	"encoding/json"
 
-	"github.com/ahmed/pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
 )
 
 // PermissionModeToProto converts an internal permission.PermissionMode to the

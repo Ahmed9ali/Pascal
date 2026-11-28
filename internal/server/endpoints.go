@@ -1,8 +1,8 @@
 package server
 
 import (
-	"github.com/ahmed/pascal/internal/apigen"
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/apigen"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 )
 
 // endpoints is the single source of truth for the v1 API: every entry

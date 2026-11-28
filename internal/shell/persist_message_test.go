@@ -3,9 +3,9 @@ package shell
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/db"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/db"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/session"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

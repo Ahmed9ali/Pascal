@@ -6,10 +6,10 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/agent/tools"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/question"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/question"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 	"github.com/charmbracelet/x/ansi"
 )
 

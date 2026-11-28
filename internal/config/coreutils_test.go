@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/config"
 	"github.com/stretchr/testify/require"
 )
 

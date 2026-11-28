@@ -4,11 +4,11 @@ import (
 	"fmt"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
-	"github.com/ahmed/pascal/internal/ui/util"
-	"github.com/ahmed/pascal/internal/workspace"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/ui/util"
+	"github.com/Ahmed9ali/Pascal/internal/workspace"
 )
 
 // hostThemeState tracks the theme a host application (an editor running

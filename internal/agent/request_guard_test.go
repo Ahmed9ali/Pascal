@@ -12,7 +12,7 @@ import (
 
 	"charm.land/fantasy"
 	"charm.land/x/vcr"
-	"github.com/ahmed/pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/message"
 	"github.com/stretchr/testify/require"
 )
 

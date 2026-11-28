@@ -3,7 +3,7 @@ package common
 import (
 	"strings"
 
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 )
 
 // Scrollbar renders a vertical scrollbar based on content and viewport size.

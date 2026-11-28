@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/ahmed/pascal/internal/workspace"
+	"github.com/Ahmed9ali/Pascal/internal/workspace"
 )
 
 // hostOpenFiles returns a function that lists the files the host application

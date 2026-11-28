@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ahmed/pascal/internal/db"
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/db"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 	"github.com/google/uuid"
 )
 

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/logout"
-	"github.com/ahmed/pascal/internal/workspace"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/logout"
+	"github.com/Ahmed9ali/Pascal/internal/workspace"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/spf13/cobra"
 )

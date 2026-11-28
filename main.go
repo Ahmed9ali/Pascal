@@ -7,8 +7,8 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"github.com/ahmed/pascal/internal/cmd"
-	_ "github.com/ahmed/pascal/internal/dns"
+	"github.com/Ahmed9ali/Pascal/internal/cmd"
+	_ "github.com/Ahmed9ali/Pascal/internal/dns"
 	_ "github.com/joho/godotenv/autoload"
 )
 

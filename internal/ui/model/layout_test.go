@@ -6,11 +6,11 @@ import (
 	"testing"
 
 	"charm.land/bubbles/v2/textarea"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/session"
-	"github.com/ahmed/pascal/internal/ui/attachments"
-	"github.com/ahmed/pascal/internal/ui/chat"
-	"github.com/ahmed/pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/ui/attachments"
+	"github.com/Ahmed9ali/Pascal/internal/ui/chat"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
 	uv "github.com/charmbracelet/ultraviolet"
 )
 

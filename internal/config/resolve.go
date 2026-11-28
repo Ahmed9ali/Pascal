@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/ahmed/pascal/internal/env"
-	"github.com/ahmed/pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/env"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
 )
 
 // resolveTimeout bounds how long a single ResolveValue call may spend

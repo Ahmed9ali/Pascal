@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/server"
+	"github.com/Ahmed9ali/Pascal/internal/server"
 	"github.com/stretchr/testify/require"
 )
 

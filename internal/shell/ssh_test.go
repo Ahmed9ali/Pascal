@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/sshaskpass"
+	"github.com/Ahmed9ali/Pascal/internal/sshaskpass"
 	"github.com/stretchr/testify/require"
 )
 

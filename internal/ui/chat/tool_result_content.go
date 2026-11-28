@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/diffdetect"
-	"github.com/ahmed/pascal/internal/stringext"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/diffdetect"
+	"github.com/Ahmed9ali/Pascal/internal/stringext"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 )
 
 type toolResultContentWidths struct {

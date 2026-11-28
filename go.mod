@@ -1,4 +1,4 @@
-module github.com/ahmed/pascal
+module github.com/Ahmed9ali/Pascal
 
 go 1.27.4
 

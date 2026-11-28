@@ -13,10 +13,10 @@ import (
 	"charm.land/catwalk/v3/pkg/catwalk"
 	"charm.land/tone"
 	"charm.land/x/nerdfont"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
-	"github.com/ahmed/pascal/internal/ui/util"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/ui/util"
 	uv "github.com/charmbracelet/ultraviolet"
 )
 

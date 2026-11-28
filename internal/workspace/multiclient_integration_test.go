@@ -12,12 +12,12 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/client"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/server"
-	"github.com/ahmed/pascal/internal/workspace"
+	"github.com/Ahmed9ali/Pascal/internal/client"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/server"
+	"github.com/Ahmed9ali/Pascal/internal/workspace"
 	"github.com/stretchr/testify/require"
 )
 

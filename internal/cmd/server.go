@@ -10,9 +10,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ahmed/pascal/internal/config"
-	crushlog "github.com/ahmed/pascal/internal/log"
-	"github.com/ahmed/pascal/internal/server"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	crushlog "github.com/Ahmed9ali/Pascal/internal/log"
+	"github.com/Ahmed9ali/Pascal/internal/server"
 	"github.com/charmbracelet/x/term"
 	"github.com/spf13/cobra"
 )

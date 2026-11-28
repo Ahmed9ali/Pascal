@@ -1,8 +1,8 @@
 package backend
 
 import (
-	"github.com/ahmed/pascal/internal/pinentry"
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/pinentry"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 )
 
 // AnswerPinentry resolves the pending integrated pinentry prompt with

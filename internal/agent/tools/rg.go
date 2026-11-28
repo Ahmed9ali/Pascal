@@ -9,7 +9,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/log"
+	"github.com/Ahmed9ali/Pascal/internal/log"
 )
 
 var getRg = sync.OnceValue(func() string {

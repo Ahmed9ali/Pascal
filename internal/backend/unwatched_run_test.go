@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/app"
-	"github.com/ahmed/pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/app"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

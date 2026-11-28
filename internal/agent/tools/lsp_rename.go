@@ -11,11 +11,11 @@ import (
 
 	"charm.land/fantasy"
 
-	"github.com/ahmed/pascal/internal/filetracker"
-	"github.com/ahmed/pascal/internal/history"
-	"github.com/ahmed/pascal/internal/lsp"
-	lsputil "github.com/ahmed/pascal/internal/lsp/util"
-	"github.com/ahmed/pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/filetracker"
+	"github.com/Ahmed9ali/Pascal/internal/history"
+	"github.com/Ahmed9ali/Pascal/internal/lsp"
+	lsputil "github.com/Ahmed9ali/Pascal/internal/lsp/util"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
 )
 
 type RenameParams struct {

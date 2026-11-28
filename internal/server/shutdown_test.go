@@ -16,11 +16,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/app"
-	"github.com/ahmed/pascal/internal/backend"
-	"github.com/ahmed/pascal/internal/db"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/app"
+	"github.com/Ahmed9ali/Pascal/internal/backend"
+	"github.com/Ahmed9ali/Pascal/internal/db"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

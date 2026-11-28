@@ -15,7 +15,7 @@ import (
 	"sync"
 	"unicode/utf8"
 
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 	"github.com/charlievieth/fastwalk"
 	"gopkg.in/yaml.v3"
 )

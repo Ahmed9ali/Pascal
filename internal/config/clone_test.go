@@ -3,7 +3,7 @@ package config
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
 	"github.com/stretchr/testify/require"
 )
 

@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
 )
 
 // largeMarkdown returns roughly size bytes of paragraphed markdown prose.

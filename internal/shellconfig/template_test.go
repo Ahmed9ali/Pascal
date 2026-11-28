@@ -3,7 +3,7 @@ package shellconfig
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/shell"
+	"github.com/Ahmed9ali/Pascal/internal/shell"
 	"github.com/stretchr/testify/require"
 )
 

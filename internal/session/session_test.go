@@ -3,7 +3,7 @@ package session
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/db"
+	"github.com/Ahmed9ali/Pascal/internal/db"
 	"github.com/stretchr/testify/require"
 )
 

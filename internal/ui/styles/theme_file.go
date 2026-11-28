@@ -10,7 +10,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/config"
 )
 
 // ThemeFile represents a standalone theme definition stored as JSON.

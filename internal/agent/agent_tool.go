@@ -9,9 +9,9 @@ import (
 	"charm.land/fantasy"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/ahmed/pascal/internal/agent/prompt"
-	"github.com/ahmed/pascal/internal/agent/tools"
-	"github.com/ahmed/pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/agent/prompt"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools"
+	"github.com/Ahmed9ali/Pascal/internal/config"
 )
 
 //go:embed templates/agent_tool.md

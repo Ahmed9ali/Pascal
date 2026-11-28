@@ -13,9 +13,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/client"
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/version"
+	"github.com/Ahmed9ali/Pascal/internal/client"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/version"
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/require"
 )

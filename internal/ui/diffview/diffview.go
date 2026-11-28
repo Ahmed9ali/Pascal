@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/ansiext"
-	"github.com/ahmed/pascal/internal/ui/xchroma"
+	"github.com/Ahmed9ali/Pascal/internal/ansiext"
+	"github.com/Ahmed9ali/Pascal/internal/ui/xchroma"
 	"github.com/alecthomas/chroma/v2"
 	"github.com/alecthomas/chroma/v2/lexers"
 	"github.com/aymanbagabas/go-udiff"

@@ -3,8 +3,8 @@ package model
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
 	"github.com/stretchr/testify/require"
 )
 

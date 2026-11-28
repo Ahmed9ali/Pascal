@@ -7,7 +7,7 @@ import (
 
 	"charm.land/lipgloss/v2"
 	"charm.land/tone"
-	"github.com/ahmed/pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/config"
 	"github.com/charmbracelet/x/term"
 	"github.com/spf13/cobra"
 )

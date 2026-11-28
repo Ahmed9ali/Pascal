@@ -7,7 +7,7 @@ import (
 	"slices"
 	"sync"
 
-	"github.com/ahmed/pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/config"
 )
 
 // reinitAction describes how to reconcile one MCP server against the

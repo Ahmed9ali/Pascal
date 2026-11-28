@@ -14,7 +14,7 @@ func TestTrimSourcePath(t *testing.T) {
 	t.Parallel()
 
 	for _, tt := range []struct{ in, want string }{
-		{"/Users/christian/go/pkg/mod/github.com/ahmed/pascal@v0.1.0/internal/agent/agent.go", "github.com/ahmed/pascal@v0.1.0/internal/agent/agent.go"},
+		{"/Users/christian/go/pkg/mod/github.com/Ahmed9ali/Pascal@v0.1.0/internal/agent/agent.go", "github.com/Ahmed9ali/Pascal@v0.1.0/internal/agent/agent.go"},
 		{"/Users/christian/go/pkg/mod/charm.land/fantasy@v2.0.1/provider.go", "charm.land/fantasy@v2.0.1/provider.go"},
 		{"/Users/christian/src/crush-log-source/internal/agent/agent.go", "internal/agent/agent.go"},
 		{"C:/ci/crush/main.go", "main.go"},

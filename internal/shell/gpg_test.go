@@ -8,7 +8,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/pinentry"
+	"github.com/Ahmed9ali/Pascal/internal/pinentry"
 	"github.com/stretchr/testify/require"
 )
 

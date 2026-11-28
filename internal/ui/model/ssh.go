@@ -3,10 +3,10 @@ package model
 import (
 	tea "charm.land/bubbletea/v2"
 
-	"github.com/ahmed/pascal/internal/sshaskpass"
-	"github.com/ahmed/pascal/internal/ui/dialog"
-	"github.com/ahmed/pascal/internal/ui/notification"
-	"github.com/ahmed/pascal/internal/ui/util"
+	"github.com/Ahmed9ali/Pascal/internal/sshaskpass"
+	"github.com/Ahmed9ali/Pascal/internal/ui/dialog"
+	"github.com/Ahmed9ali/Pascal/internal/ui/notification"
+	"github.com/Ahmed9ali/Pascal/internal/ui/util"
 )
 
 // handleSSHPrompt routes an SSH askpass request: a passive security key

@@ -8,7 +8,7 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"github.com/ahmed/pascal/internal/ui/anim"
+	"github.com/Ahmed9ali/Pascal/internal/ui/anim"
 	"github.com/charmbracelet/x/ansi"
 )
 

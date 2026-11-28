@@ -14,7 +14,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/ahmed/pascal/internal/filepathext"
+	"github.com/Ahmed9ali/Pascal/internal/filepathext"
 	"mvdan.cc/sh/v3/expand"
 	"mvdan.cc/sh/v3/interp"
 	"mvdan.cc/sh/v3/syntax"

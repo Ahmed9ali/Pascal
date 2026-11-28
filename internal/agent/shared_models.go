@@ -7,7 +7,7 @@ import (
 
 	"charm.land/catwalk/v3/pkg/catwalk"
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/config"
 )
 
 // ModelSet is the large and small model an agent sends requests through.

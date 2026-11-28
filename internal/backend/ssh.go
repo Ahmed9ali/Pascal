@@ -1,8 +1,8 @@
 package backend
 
 import (
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/sshaskpass"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/sshaskpass"
 )
 
 // AnswerSSH resolves the pending integrated SSH prompt with the user's

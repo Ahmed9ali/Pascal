@@ -3,7 +3,7 @@ package server
 import (
 	"net/http"
 
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 )
 
 // handleGetWorkspaceGitBranch returns the current Git branch of the

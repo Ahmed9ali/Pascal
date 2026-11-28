@@ -12,7 +12,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/dirid"
+	"github.com/Ahmed9ali/Pascal/internal/dirid"
 	"github.com/pressly/goose/v3"
 )
 

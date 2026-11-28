@@ -16,8 +16,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ahmed/pascal/internal/backend"
-	"github.com/ahmed/pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/backend"
+	"github.com/Ahmed9ali/Pascal/internal/config"
 )
 
 // maxUnixSocketPathLen is the maximum length of a Unix domain socket

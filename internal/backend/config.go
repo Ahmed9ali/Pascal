@@ -7,15 +7,15 @@ import (
 	"slices"
 	"sync"
 
-	"github.com/ahmed/pascal/internal/agent"
-	mcptools "github.com/ahmed/pascal/internal/agent/tools/mcp"
-	"github.com/ahmed/pascal/internal/commands"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/gitutil"
-	"github.com/ahmed/pascal/internal/oauth"
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/pubsub"
-	"github.com/ahmed/pascal/internal/skills"
+	"github.com/Ahmed9ali/Pascal/internal/agent"
+	mcptools "github.com/Ahmed9ali/Pascal/internal/agent/tools/mcp"
+	"github.com/Ahmed9ali/Pascal/internal/commands"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/gitutil"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/skills"
 )
 
 // publishConfigChanged publishes a ConfigChanged event on the workspace's

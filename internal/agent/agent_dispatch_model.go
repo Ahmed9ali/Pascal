@@ -11,7 +11,7 @@ import (
 	"charm.land/fantasy"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/ahmed/pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/config"
 )
 
 // mainModel returns the model the main agent runs on, or the zero Model

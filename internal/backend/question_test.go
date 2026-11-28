@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/proto"
-	"github.com/ahmed/pascal/internal/question"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/question"
 	"github.com/stretchr/testify/require"
 )
 

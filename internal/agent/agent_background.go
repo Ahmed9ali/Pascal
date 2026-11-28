@@ -8,7 +8,7 @@ import (
 
 	"charm.land/fantasy"
 
-	"github.com/ahmed/pascal/internal/agent/tools"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools"
 )
 
 // subAgentBackgroundAfter is how long a blocking subagent tool call runs in

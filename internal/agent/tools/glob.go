@@ -15,9 +15,9 @@ import (
 	"strings"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/filepathext"
-	"github.com/ahmed/pascal/internal/fsext"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/filepathext"
+	"github.com/Ahmed9ali/Pascal/internal/fsext"
 )
 
 const GlobToolName = "glob"

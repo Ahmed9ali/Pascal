@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ahmed/pascal/internal/pinentry"
+	"github.com/Ahmed9ali/Pascal/internal/pinentry"
 	"mvdan.cc/sh/v3/interp"
 )
 

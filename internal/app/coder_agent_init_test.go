@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/agent"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/proto"
+	"github.com/Ahmed9ali/Pascal/internal/agent"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/proto"
 	"github.com/stretchr/testify/require"
 )
 

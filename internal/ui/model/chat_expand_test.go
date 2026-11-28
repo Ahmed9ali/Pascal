@@ -3,8 +3,8 @@ package model
 import (
 	"testing"
 
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/ui/chat"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/ui/chat"
 	"github.com/stretchr/testify/require"
 )
 

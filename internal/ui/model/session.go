@@ -10,14 +10,14 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/diff"
-	"github.com/ahmed/pascal/internal/fsext"
-	"github.com/ahmed/pascal/internal/history"
-	"github.com/ahmed/pascal/internal/message"
-	"github.com/ahmed/pascal/internal/session"
-	"github.com/ahmed/pascal/internal/ui/common"
-	"github.com/ahmed/pascal/internal/ui/styles"
-	"github.com/ahmed/pascal/internal/ui/util"
+	"github.com/Ahmed9ali/Pascal/internal/diff"
+	"github.com/Ahmed9ali/Pascal/internal/fsext"
+	"github.com/Ahmed9ali/Pascal/internal/history"
+	"github.com/Ahmed9ali/Pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/ui/styles"
+	"github.com/Ahmed9ali/Pascal/internal/ui/util"
 	"github.com/charmbracelet/x/ansi"
 )
 

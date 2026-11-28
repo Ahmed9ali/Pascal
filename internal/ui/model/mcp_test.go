@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/agent/tools/mcp"
-	"github.com/ahmed/pascal/internal/ui/common"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools/mcp"
+	"github.com/Ahmed9ali/Pascal/internal/ui/common"
 )
 
 func TestMCPList_ChannelBadge(t *testing.T) {

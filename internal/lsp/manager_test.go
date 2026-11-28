@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
 	powernapconfig "github.com/charmbracelet/x/powernap/pkg/config"
 	"github.com/stretchr/testify/require"
 )

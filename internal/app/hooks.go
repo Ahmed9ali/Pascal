@@ -7,10 +7,10 @@ import (
 	"log/slog"
 	"time"
 
-	"github.com/ahmed/pascal/internal/agent"
-	"github.com/ahmed/pascal/internal/hooks"
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/agent"
+	"github.com/Ahmed9ali/Pascal/internal/hooks"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/session"
 )
 
 // sessionEndTimeout bounds the SessionEnd hooks so a slow script cannot

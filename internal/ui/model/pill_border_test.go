@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ahmed/pascal/internal/session"
+	"github.com/Ahmed9ali/Pascal/internal/session"
 )
 
 // roundedBorderRunes are chars that only appear when a pill has a visible

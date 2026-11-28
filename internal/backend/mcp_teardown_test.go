@@ -10,8 +10,8 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	mcptools "github.com/ahmed/pascal/internal/agent/tools/mcp"
-	"github.com/ahmed/pascal/internal/pubsub"
+	mcptools "github.com/Ahmed9ali/Pascal/internal/agent/tools/mcp"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 	"github.com/stretchr/testify/require"
 )

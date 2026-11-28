@@ -15,11 +15,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ahmed/pascal/internal/agent"
-	"github.com/ahmed/pascal/internal/agent/tools"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/db"
-	"github.com/ahmed/pascal/internal/skills"
+	"github.com/Ahmed9ali/Pascal/internal/agent"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/db"
+	"github.com/Ahmed9ali/Pascal/internal/skills"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,8 +3,8 @@ package testutil
 import (
 	"context"
 
-	"github.com/ahmed/pascal/internal/permission"
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 )
 
 // MockPermissionService implements permission.Service for testing. It always

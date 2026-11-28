@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"charm.land/catwalk/v3/pkg/catwalk"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/lsp"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/lsp"
 )
 
 // WorkspacePermissionMode represents the permission enforcement level for a

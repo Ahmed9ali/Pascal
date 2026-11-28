@@ -10,7 +10,7 @@ import (
 	"sync"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/lsp"
+	"github.com/Ahmed9ali/Pascal/internal/lsp"
 )
 
 const LSPRestartToolName = "lsp_restart"

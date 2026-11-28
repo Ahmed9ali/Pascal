@@ -20,9 +20,9 @@ import (
 	"time"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/csync"
-	"github.com/ahmed/pascal/internal/fsext"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/csync"
+	"github.com/Ahmed9ali/Pascal/internal/fsext"
 	"github.com/charmbracelet/x/ansi"
 )
 

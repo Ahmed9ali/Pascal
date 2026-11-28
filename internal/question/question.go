@@ -14,7 +14,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 	"github.com/google/uuid"
 )
 

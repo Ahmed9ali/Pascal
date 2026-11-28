@@ -5,9 +5,9 @@ import (
 	"testing"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/config"
-	"github.com/ahmed/pascal/internal/hooks"
-	"github.com/ahmed/pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/config"
+	"github.com/Ahmed9ali/Pascal/internal/hooks"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
 	"github.com/stretchr/testify/require"
 )
 

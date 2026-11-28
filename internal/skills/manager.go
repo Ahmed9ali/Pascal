@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ahmed/pascal/internal/home"
-	"github.com/ahmed/pascal/internal/pubsub"
+	"github.com/Ahmed9ali/Pascal/internal/home"
+	"github.com/Ahmed9ali/Pascal/internal/pubsub"
 )
 
 // Manager owns per-workspace skill discovery state: the latest discovery

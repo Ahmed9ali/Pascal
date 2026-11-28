@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ahmed/pascal/internal/lock"
-	"github.com/ahmed/pascal/internal/version"
+	"github.com/Ahmed9ali/Pascal/internal/lock"
+	"github.com/Ahmed9ali/Pascal/internal/version"
 )
 
 // ErrDataDirLocked is returned by Connect when the data directory is

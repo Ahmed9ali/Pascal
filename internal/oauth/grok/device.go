@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ahmed/pascal/internal/oauth"
+	"github.com/Ahmed9ali/Pascal/internal/oauth"
 )
 
 // deviceCodeEndpoint is a variable so tests can point it at a stub

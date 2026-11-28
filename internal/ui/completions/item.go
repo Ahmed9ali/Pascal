@@ -4,7 +4,7 @@ import (
 	"slices"
 
 	"charm.land/lipgloss/v2"
-	"github.com/ahmed/pascal/internal/ui/list"
+	"github.com/Ahmed9ali/Pascal/internal/ui/list"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/rivo/uniseg"
 	"github.com/sahilm/fuzzy"

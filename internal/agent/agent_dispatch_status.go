@@ -12,8 +12,8 @@ import (
 
 	"charm.land/fantasy"
 
-	"github.com/ahmed/pascal/internal/agent/tools"
-	"github.com/ahmed/pascal/internal/message"
+	"github.com/Ahmed9ali/Pascal/internal/agent/tools"
+	"github.com/Ahmed9ali/Pascal/internal/message"
 )
 
 //go:embed templates/agent_status_tool.md

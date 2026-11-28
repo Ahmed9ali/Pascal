@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"charm.land/fantasy"
-	"github.com/ahmed/pascal/internal/filepathext"
-	"github.com/ahmed/pascal/internal/permission"
+	"github.com/Ahmed9ali/Pascal/internal/filepathext"
+	"github.com/Ahmed9ali/Pascal/internal/permission"
 )
 
 type DownloadParams struct {
