@@ -917,7 +917,7 @@ func quickStyle(o quickStyleOpts) Styles {
 	s.Tool.ResultItemDesc = lipgloss.NewStyle().Foreground(o.fgMostSubtle)
 
 	// Buttons
-	s.Button.Focused = lipgloss.NewStyle().Foreground(o.onPrimary).Background(o.button)
+	s.Button.Focused = lipgloss.NewStyle().Foreground(badgeInk(o.button, o.onPrimary, o.fgBase)).Background(o.button)
 	s.Button.Blurred = lipgloss.NewStyle().Foreground(o.fgBase).Background(o.buttonSubtle)
 	s.Button.Inactive = lipgloss.NewStyle().Foreground(o.fgBase).Background(o.buttonInactive)
 	s.Button.Hovered = lipgloss.NewStyle().Foreground(badgeInk(o.buttonHovered, o.onPrimary, o.fgBase)).Background(o.buttonHovered)
