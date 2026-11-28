@@ -18,11 +18,11 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-// TestRunStopsOnTerminationSignal guards against `crush run` ignoring
+// TestRunStopsOnTerminationSignal guards against `pascal run` ignoring
 // SIGTERM and SIGHUP, which the root command catches, and streaming on
 // until its agent finishes.
 func TestRunStopsOnTerminationSignal(t *testing.T) {
-	bin := crushBinary(t)
+	bin := pascalBinary(t)
 	for _, clientServer := range []bool{false, true} {
 		for _, sig := range []syscall.Signal{syscall.SIGINT, syscall.SIGTERM, syscall.SIGHUP} {
 			t.Run(fmt.Sprintf("client-server=%t/%v", clientServer, sig), func(t *testing.T) {
@@ -105,7 +105,7 @@ func startSlowLLM(t *testing.T) (streaming, cancelled chan struct{}, url string)
 // writeMockConfig points the sandbox's global config at the LLM at url.
 func writeMockConfig(t *testing.T, sb *sandbox, url string) {
 	t.Helper()
-	dir := filepath.Join(sb.dir, "xdg_config_home", "crush")
+	dir := filepath.Join(sb.dir, "xdg_config_home", "pascal")
 	require.NoError(t, os.MkdirAll(dir, 0o700))
 	cfg := fmt.Sprintf(`{
   "providers": {"mock": {"type": "openai-compat", "base_url": %q, "api_key": "test",

@@ -27,7 +27,7 @@ import (
 // ensureServer when it gives up waiting for the server socket /
 // readiness probe (internal/cmd/root.go). Seeing this in any client's
 // output means the race fired.
-const readinessErrSubstr = "failed to initialize crush server"
+const readinessErrSubstr = "failed to initialize pascal server"
 
 // numClients is intentionally larger than the typical CPU count to
 // ensure the spawn lock + readiness probe are exercised under
@@ -55,18 +55,18 @@ func TestClientServerSpawnRace(t *testing.T) {
 	}
 
 	repoRoot := repoRootFromTest(t)
-	bin := buildCrushBinary(t, repoRoot)
+	bin := buildPascalBinary(t, repoRoot)
 
 	// Use /tmp directly so the unix socket path stays under the
 	// 104-char sockaddr_un limit on darwin. t.TempDir() can return a
 	// path inside /var/folders/... that is too long.
-	runDir, err := os.MkdirTemp("/tmp", "crush-race-")
+	runDir, err := os.MkdirTemp("/tmp", "pascal-race-")
 	if err != nil {
 		t.Fatalf("mkdtemp: %v", err)
 	}
 	t.Cleanup(func() { _ = os.RemoveAll(runDir) })
 
-	socketPath := filepath.Join(runDir, "crush.sock")
+	socketPath := filepath.Join(runDir, "pascal.sock")
 	host := "unix://" + socketPath
 
 	// Fresh, isolated XDG/HOME so we don't touch the user's real
@@ -164,8 +164,8 @@ func TestClientServerSpawnRace(t *testing.T) {
 			ctx, cancel := context.WithTimeout(context.Background(), clientTimeout)
 			defer cancel()
 
-			// `crush logout` exercises connectToServer (which is
-			// where the readiness race lives) and, unlike `crush
+			// `pascal logout` exercises connectToServer (which is
+			// where the readiness race lives) and, unlike `pascal
 			// run`, spawns a server when none is running. The
 			// context timeout above bounds the run. We assert race
 			// outcomes purely from output, not exit code.
@@ -243,7 +243,7 @@ func pingHealth(socketPath string) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet,
-		"http://crush.local/v1/health", nil)
+		"http://pascal.local/v1/health", nil)
 	if err != nil {
 		return err
 	}
@@ -280,19 +280,19 @@ func repoRootFromTest(t *testing.T) string {
 	}
 }
 
-// buildCrushBinary builds the crush binary once at the start of the
+// buildPascalBinary builds the pascal binary once at the start of the
 // test and returns the absolute path. Subsequent t.Cleanup removes
 // the built artefact.
-func buildCrushBinary(t *testing.T, repoRoot string) string {
+func buildPascalBinary(t *testing.T, repoRoot string) string {
 	t.Helper()
 
-	binDir, err := os.MkdirTemp("", "crush-race-bin-")
+	binDir, err := os.MkdirTemp("", "pascal-race-bin-")
 	if err != nil {
 		t.Fatalf("mkdtemp bin: %v", err)
 	}
 	t.Cleanup(func() { _ = os.RemoveAll(binDir) })
 
-	binPath := filepath.Join(binDir, "crush")
+	binPath := filepath.Join(binDir, "pascal")
 
 	// A cold build takes minutes on a slow CI runner, so it gets the time
 	// the test run has left, less a moment to report a failure, rather
@@ -312,12 +312,12 @@ func buildCrushBinary(t *testing.T, repoRoot string) string {
 	cmd.Env = append(os.Environ(), "CGO_ENABLED=0")
 	out, err := cmd.CombinedOutput()
 	if err != nil {
-		t.Fatalf("go build crush: %v\n%s", err, out)
+		t.Fatalf("go build pascal: %v\n%s", err, out)
 	}
 	return binPath
 }
 
-// shutdownServer best-effort terminates any crush server bound to
+// shutdownServer best-effort terminates any pascal server bound to
 // socketPath by POSTing to /v1/control. We don't import the project's
 // own client package to keep this test free of internal API churn.
 func shutdownServer(t *testing.T, socketPath string) {
@@ -340,7 +340,7 @@ func shutdownServer(t *testing.T, socketPath string) {
 
 	body := strings.NewReader(`{"command":"shutdown"}`)
 	req, err := http.NewRequestWithContext(ctx, http.MethodPost,
-		"http://crush.local/v1/control", body)
+		"http://pascal.local/v1/control", body)
 	if err != nil {
 		t.Logf("shutdown: build request: %v", err)
 		return

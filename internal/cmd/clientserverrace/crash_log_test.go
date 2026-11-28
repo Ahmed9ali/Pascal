@@ -15,10 +15,10 @@ import (
 // truncating the previous server's stdout.log and stderr.log, which hold
 // the only record of a crash.
 func TestRespawnKeepsPreviousServerOutput(t *testing.T) {
-	sb := newSandbox(t, crushBinary(t), "PASCAL_CLIENT_SERVER=1")
+	sb := newSandbox(t, pascalBinary(t), "PASCAL_CLIENT_SERVER=1")
 	t.Cleanup(func() { shutdownServer(t, sb.socket) })
 
-	// `crush logout` connects to the server and, unlike `crush run`,
+	// `pascal logout` connects to the server and, unlike `pascal run`,
 	// spawns one when none is running.
 	run := func() {
 		t.Helper()
@@ -31,7 +31,7 @@ func TestRespawnKeepsPreviousServerOutput(t *testing.T) {
 	}
 
 	run()
-	serverDirs, err := filepath.Glob(filepath.Join(sb.dir, "xdg_cache_home", "crush", "server-*"))
+	serverDirs, err := filepath.Glob(filepath.Join(sb.dir, "xdg_cache_home", "pascal", "server-*"))
 	require.NoError(t, err)
 	require.Len(t, serverDirs, 1)
 	shutdownServer(t, sb.socket)

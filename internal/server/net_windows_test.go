@@ -19,7 +19,7 @@ import (
 // lets users other than its owner (and LocalSystem) connect.
 func TestListen_RestrictsPipeToOwner(t *testing.T) {
 	t.Parallel()
-	path := fmt.Sprintf(`\\.\pipe\crush-test-%d-%d.sock`, os.Getpid(), time.Now().UnixNano())
+	path := fmt.Sprintf(`\\.\pipe\pascal-test-%d-%d.sock`, os.Getpid(), time.Now().UnixNano())
 	ln, _, err := listen("npipe", path)
 	require.NoError(t, err)
 	t.Cleanup(func() { _ = ln.Close() })

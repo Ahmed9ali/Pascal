@@ -17,7 +17,14 @@ const (
 )
 
 // Default is the default [Client].
-var Default Client = &github{}
+var Default Client = disabledClient{}
+
+// disabledClient never contacts GitHub: Pascal is a personal fork.
+type disabledClient struct{}
+
+func (disabledClient) Latest(context.Context) (*Release, error) {
+	return nil, fmt.Errorf("update checks are disabled")
+}
 
 // Info contains information about an available update.
 type Info struct {
@@ -56,7 +63,6 @@ func (i Info) Available() bool {
 
 // Check checks if a new version is available.
 func Check(ctx context.Context, current string, client Client) (Info, error) {
-	return Info{Current: current, Latest: current}, nil
 	info := Info{
 		Current: current,
 		Latest:  current,

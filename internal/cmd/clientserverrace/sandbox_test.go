@@ -11,8 +11,8 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-// crushBinary builds crush, skipping where the binary tests cannot run.
-func crushBinary(t *testing.T) string {
+// pascalBinary builds pascal, skipping where the binary tests cannot run.
+func pascalBinary(t *testing.T) string {
 	t.Helper()
 	if testing.Short() {
 		t.Skip("skipping binary test in -short mode")
@@ -23,10 +23,10 @@ func crushBinary(t *testing.T) string {
 	if _, err := exec.LookPath("go"); err != nil {
 		t.Skip("skipping: 'go' not available on PATH")
 	}
-	return buildCrushBinary(t, repoRootFromTest(t))
+	return buildPascalBinary(t, repoRootFromTest(t))
 }
 
-// sandbox keeps crush processes away from the user's real state, provider
+// sandbox keeps pascal processes away from the user's real state, provider
 // credentials and default socket.
 type sandbox struct {
 	bin, dir, project, socket, host string
@@ -36,7 +36,7 @@ type sandbox struct {
 func newSandbox(t *testing.T, bin string, env ...string) *sandbox {
 	t.Helper()
 	// A /tmp path keeps the socket under darwin's 104-byte sun_path limit.
-	dir, err := os.MkdirTemp("/tmp", "crush-test-")
+	dir, err := os.MkdirTemp("/tmp", "pascal-test-")
 	require.NoError(t, err)
 	t.Cleanup(func() { _ = os.RemoveAll(dir) })
 
@@ -44,7 +44,7 @@ func newSandbox(t *testing.T, bin string, env ...string) *sandbox {
 		bin:     bin,
 		dir:     dir,
 		project: filepath.Join(dir, "project"),
-		socket:  filepath.Join(dir, "crush.sock"),
+		socket:  filepath.Join(dir, "pascal.sock"),
 	}
 	sb.host = "unix://" + sb.socket
 	require.NoError(t, os.MkdirAll(sb.project, 0o700))
@@ -63,14 +63,14 @@ func newSandbox(t *testing.T, bin string, env ...string) *sandbox {
 	return sb
 }
 
-// proc is a crush process started by [sandbox.start].
+// proc is a pascal process started by [sandbox.start].
 type proc struct {
 	cmd  *exec.Cmd
 	done chan struct{}
 	err  error // Set once done is closed.
 }
 
-// start runs crush with args, logging to name.log. The test's context kills
+// start runs pascal with args, logging to name.log. The test's context kills
 // the process when the test ends, and a cleanup reaps it.
 func (sb *sandbox) start(t *testing.T, name string, args ...string) *proc {
 	t.Helper()

@@ -199,7 +199,7 @@ func TestLookupConfigs_BoundedByProject(t *testing.T) {
 		require.NotEmpty(t, got)
 		// The system-wide config must be first so it has the lowest
 		// priority when configs are merged.
-		require.Equal(t, "/etc/crush/pascal.json", got[0])
+		require.Equal(t, "/etc/pascal/pascal.json", got[0])
 	})
 }
 

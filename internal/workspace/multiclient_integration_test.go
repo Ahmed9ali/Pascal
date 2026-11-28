@@ -224,7 +224,7 @@ func TestClientWorkspace_GlobalTogglesRefreshCaches(t *testing.T) {
 			t.Setenv("PASCAL_DISABLE_PROVIDER_AUTO_UPDATE", "1")
 			// The command does not exist, so startup only records an
 			// error and no MCP server ever runs.
-			globalCfg := filepath.Join(os.Getenv("XDG_CONFIG_HOME"), "crush", "pascal.json")
+			globalCfg := filepath.Join(os.Getenv("XDG_CONFIG_HOME"), "pascal", "pascal.json")
 			require.NoError(t, os.MkdirAll(filepath.Dir(globalCfg), 0o755))
 			require.NoError(t, os.WriteFile(globalCfg, fmt.Appendf(nil,
 				`{"mcp": {%q: {"type": "stdio", "command": "crush-toggle-probe-missing"}}}`, name), 0o644))
